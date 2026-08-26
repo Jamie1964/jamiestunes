@@ -1,0 +1,246 @@
+<!-- jamiestunes.com/concerts/george-strait-live-2021 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George Strait – Live at Allegiant Stadium (2021) – Full Concert HD</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --sidebar-bg: #1a1a1a;
+            --accent-color: #4da6ff;
+            --border-color: #333333;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Navigation */
+        aside {
+            width: 280px;
+            background-color: var(--sidebar-bg);
+            border-right: 1px solid var(--border-color);
+            padding: 20px;
+            box-sizing: border-box;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        aside h2 {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            color: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        aside a {
+            display: block;
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 8px 0;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        aside a:hover {
+            color: var(--accent-color);
+        }
+
+        aside a.home-link {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #ffffff;
+        }
+
+        /* Main Content Area */
+        main {
+            margin-left: 280px;
+            flex: 1;
+            padding: 40px;
+            max-width: 900px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-top: 0;
+            color: #ffffff;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 30px;
+            color: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+
+        p, li {
+            line-height: 1.6;
+            color: #cccccc;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        /* Video Container */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            background: #000;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Concert Details Grid */
+        .concert-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            background: var(--sidebar-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        .concert-details p {
+            margin: 0;
+        }
+
+        .concert-details strong {
+            color: #ffffff;
+        }
+
+        /* Footer Branding */
+        .footer-branding {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .footer-branding a {
+            text-decoration: none;
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .footer-branding p {
+            margin: 5px 0 0 0;
+            font-size: 0.9rem;
+            color: #888888;
+        }
+
+        .meta-info {
+            font-size: 0.85rem;
+            color: #777777;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            aside {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+            main {
+                margin-left: 0;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <aside>
+        <a href="/" class="home-link">HOME</a>
+        <h2>Concerts</h2>
+        <a href="/concerts/AC-DC-River-Plate">AC/DC – Live at River Plate (2009)</a>
+        <a href="/concerts/Amy-Winehouse-Glastonbury">Amy Winehouse – Glastonbury 2008</a>
+        <a href="/concerts/Bee-Gees-One-Night-Only">Bee Gees – One Night Only (1997)</a>
+        <a href="/concerts/Bruce-Springsteen-Live-NYC">Bruce Springsteen – Live in NYC (2000)</a>
+        <a href="/concerts/Dire-Straits-Rockpop-1980">Dire Straits – Rockpop In Concert (1980)</a>
+        <a href="/concerts/george-strait-live-2021" style="color: var(--accent-color);">George Strait – Live at Allegiant Stadium (2021)</a>
+        <a href="/concerts/Lanie-Gardner-Bonfire">Lanie Gardner – Bonfire Sessions</a>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <h1>George Strait – Live at Allegiant Stadium (2021) – Full Concert HD</h1>
+
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/AMJM4KxZV8Q" title="George Strait Full Concert [HD] LIVE 10/1/2021 - YouTube" allowfullscreen></iframe>
+        </div>
+
+        <!-- Concert Details Meta Box -->
+        <div class="concert-details">
+            <p><strong>Artist:</strong> George Strait</p>
+            <p><strong>Concert Name:</strong> Live at Allegiant Stadium</p>
+            <p><strong>Year:</strong> 2021</p>
+            <p><strong>Venue:</strong> Allegiant Stadium (Las Vegas, Nevada, USA)</p>
+            <p><strong>Date:</strong> October 1, 2021</p>
+        </div>
+
+        <h2>Background & Production Notes</h2>
+        <p>On October 1, 2021, the undisputed "King of Country," George Strait, took over the newly opened Allegiant Stadium in Las Vegas for a massive, sold-out headlining concert. Returning to the live stage following pandemic-related delays, Strait delivered a masterclass in traditional country music showmanship, backed by his legendary Ace in the Hole Band.</p>
+        <p>The production utilized state-of-the-art stadium screens and crystal-clear audio engineering to bring his timeless honky-tonk sound to tens of thousands of cheering fans. The setlist functioned as a living museum of modern country music history, seamlessly moving between swinging up-tempo hits and deeply reflective ballads.</p>
+
+        <h2>Historical Significance</h2>
+        <p>This landmark Las Vegas performance marked one of the most triumphant returns of major stadium country music events following the live entertainment shutdowns of 2020. Playing to a roaring crowd in the entertainment capital of the world, Strait reaffirmed his unparalleled status as a touring powerhouse who can fill massive modern venues using purely traditional instrumentation and effortless vocal delivery.</p>
+
+        <h2>Fun Facts & Trivia</h2>
+        <ul>
+            <li>This concert was part of George Strait's exclusive series of stadium dates hosted at Allegiant Stadium.</li>
+            <li>The legendary musician was joined by special guest acts including Willie Nelson, Stapleton, and Brothers Osborne for select milestone dates around this era.</li>
+            <li>George Strait holds the world record for the largest ticketed attendance at a single concert, a record he set during his historic final tour run.</li>
+        </ul>
+
+        <h2>Band Member Spotlight</h2>
+        <p><strong>George Strait</strong> — Lead vocals and acoustic guitar. The definitive voice of traditional modern country music.</p>
+        <p><strong>The Ace in the Hole Band</strong> — The foundational backing ensemble providing the authentic twin-fiddle and steel-guitar-driven sound that anchors every Strait performance.</p>
+
+        <div class="meta-info">
+            views: 1 &bull; Last Updated: August 26, 2026 — 9:00 AM MDT
+        </div>
+
+        <!-- Footer Branding -->
+        <div class="footer-branding">
+            <a href="https://wepaythefreight.com">WePayTheFreight.com</a>
+            <p>Free shipping. Free laughs. Free everything.</p>
+        </div>
+    </main>
+
+</body>
+</html>
