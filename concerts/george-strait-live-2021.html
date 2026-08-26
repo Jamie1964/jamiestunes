@@ -20,7 +20,14 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             display: flex;
+            flex-direction: column;
             min-height: 100vh;
+        }
+        /* Layout Wrapper to handle sidebar + main content grid */
+        .page-wrapper {
+            display: flex;
+            flex: 1;
+            position: relative;
         }
         /* Sidebar Container */
         #concertSidebar {
@@ -28,8 +35,19 @@
             background-color: var(--sidebar-bg);
             border-right: 1px solid var(--border-color);
             position: fixed;
+            top: 0;
+            left: 0;
             height: 100vh;
             overflow-y: auto;
+            z-index: 10;
+        }
+        /* Header Container - spans full width above content, offset by sidebar on desktop */
+        #concertHeader {
+            margin-left: 280px;
+            width: calc(100% - 280px);
+            background-color: var(--sidebar-bg);
+            border-bottom: 1px solid var(--border-color);
+            box-sizing: border-box;
         }
         /* Main Content Area */
         main, .content {
@@ -123,10 +141,17 @@
             body {
                 flex-direction: column;
             }
+            .page-wrapper {
+                flex-direction: column;
+            }
             #concertSidebar {
                 position: relative;
                 width: 100%;
                 height: auto;
+            }
+            #concertHeader {
+                margin-left: 0;
+                width: 100%;
             }
             main, .content {
                 margin-left: 0;
@@ -140,8 +165,58 @@
     <!-- SIDEBAR CONTAINER -->
     <div id="concertSidebar"></div>
 
-    <!-- HEADER CONTAINER (Optional) -->
+    <!-- HEADER CONTAINER -->
     <div id="concertHeader"></div>
+
+    <!-- PAGE WRAPPER FOR CONTENT -->
+    <div class="page-wrapper">
+        <!-- Main Content -->
+        <main class="content">
+            <h1>George Strait – Live at Allegiant Stadium (2021) – Full Concert HD</h1>
+
+            <!-- Embedded YouTube Video -->
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/AMJM4KxZV8Q" title="George Strait Full Concert [HD] LIVE 10/1/2021 - YouTube" allowfullscreen></iframe>
+            </div>
+
+            <!-- Concert Details Meta Box -->
+            <div class="concert-details">
+                <p><strong>Artist:</strong> George Strait</p>
+                <p><strong>Concert Name:</strong> Live at Allegiant Stadium</p>
+                <p><strong>Year:</strong> 2021</p>
+                <p><strong>Venue:</strong> Allegiant Stadium (Las Vegas, Nevada, USA)</p>
+                <p><strong>Date:</strong> October 1, 2021</p>
+            </div>
+
+            <h2>Background & Production Notes</h2>
+            <p>On October 1, 2021, the undisputed "King of Country," George Strait, took over the newly opened Allegiant Stadium in Las Vegas for a massive, sold-out headlining concert. Returning to the live stage following pandemic-related delays, Strait delivered a masterclass in traditional country music showmanship, backed by his legendary Ace in the Hole Band.</p>
+            <p>The production utilized state-of-the-art stadium screens and crystal-clear audio engineering to bring his timeless honky-tonk sound to tens of thousands of cheering fans. The setlist functioned as a living museum of modern country music history, seamlessly moving between swinging up-tempo hits and deeply reflective ballads.</p>
+
+            <h2>Historical Significance</h2>
+            <p>This landmark Las Vegas performance marked one of the most triumphant returns of major stadium country music events following the live entertainment shutdowns of 2020. Playing to a roaring crowd in the entertainment capital of the world, Strait reaffirmed his unparalleled status as a touring powerhouse who can fill massive modern venues using purely traditional instrumentation and effortless vocal delivery.</p>
+
+            <h2>Fun Facts & Trivia</h2>
+            <ul>
+                <li>This concert was part of George Strait's exclusive series of stadium dates hosted at Allegiant Stadium.</li>
+                <li>The legendary musician was joined by special guest acts including Willie Nelson, Stapleton, and Brothers Osborne for select milestone dates around this era.</li>
+                <li>George Strait holds the world record for the largest ticketed attendance at a single concert, a record he set during his historic final tour run.</li>
+            </ul>
+
+            <h2>Band Member Spotlight</h2>
+            <p><strong>George Strait</strong> — Lead vocals and acoustic guitar. The definitive voice of traditional modern country music.</p>
+            <p><strong>The Ace in the Hole Band</strong> — The foundational backing ensemble providing the authentic twin-fiddle and steel-guitar-driven sound that anchors every Strait performance.</p>
+
+            <div class="meta-info">
+                views: 1 &bull; Last Updated: August 26, 2026 &mdash; 11:20 AM MDT
+            </div>
+
+            <!-- Footer Branding -->
+            <div class="footer-branding">
+                <a href="https://wepaythefreight.com">WePayTheFreight.com</a>
+                <p>Free shipping. Free laughs. Free everything.</p>
+            </div>
+        </main>
+    </div>
 
     <!-- SAFE COMBINED LAYOUT FETCHER -->
     <script>
@@ -166,53 +241,6 @@
         }
         loadLayoutPartials();
     </script>
-
-    <!-- Main Content -->
-    <main class="content">
-        <h1>George Strait – Live at Allegiant Stadium (2021) – Full Concert HD</h1>
-
-        <!-- Embedded YouTube Video -->
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/AMJM4KxZV8Q" title="George Strait Full Concert [HD] LIVE 10/1/2021 - YouTube" allowfullscreen></iframe>
-        </div>
-
-        <!-- Concert Details Meta Box -->
-        <div class="concert-details">
-            <p><strong>Artist:</strong> George Strait</p>
-            <p><strong>Concert Name:</strong> Live at Allegiant Stadium</p>
-            <p><strong>Year:</strong> 2021</p>
-            <p><strong>Venue:</strong> Allegiant Stadium (Las Vegas, Nevada, USA)</p>
-            <p><strong>Date:</strong> October 1, 2021</p>
-        </div>
-
-        <h2>Background & Production Notes</h2>
-        <p>On October 1, 2021, the undisputed "King of Country," George Strait, took over the newly opened Allegiant Stadium in Las Vegas for a massive, sold-out headlining concert. Returning to the live stage following pandemic-related delays, Strait delivered a masterclass in traditional country music showmanship, backed by his legendary Ace in the Hole Band.</p>
-        <p>The production utilized state-of-the-art stadium screens and crystal-clear audio engineering to bring his timeless honky-tonk sound to tens of thousands of cheering fans. The setlist functioned as a living museum of modern country music history, seamlessly moving between swinging up-tempo hits and deeply reflective ballads.</p>
-
-        <h2>Historical Significance</h2>
-        <p>This landmark Las Vegas performance marked one of the most triumphant returns of major stadium country music events following the live entertainment shutdowns of 2020. Playing to a roaring crowd in the entertainment capital of the world, Strait reaffirmed his unparalleled status as a touring powerhouse who can fill massive modern venues using purely traditional instrumentation and effortless vocal delivery.</p>
-
-        <h2>Fun Facts & Trivia</h2>
-        <ul>
-            <li>This concert was part of George Strait's exclusive series of stadium dates hosted at Allegiant Stadium.</li>
-            <li>The legendary musician was joined by special guest acts including Willie Nelson, Stapleton, and Brothers Osborne for select milestone dates around this era.</li>
-            <li>George Strait holds the world record for the largest ticketed attendance at a single concert, a record he set during his historic final tour run.</li>
-        </ul>
-
-        <h2>Band Member Spotlight</h2>
-        <p><strong>George Strait</strong> — Lead vocals and acoustic guitar. The definitive voice of traditional modern country music.</p>
-        <p><strong>The Ace in the Hole Band</strong> — The foundational backing ensemble providing the authentic twin-fiddle and steel-guitar-driven sound that anchors every Strait performance.</p>
-
-        <div class="meta-info">
-            views: 1 &bull; Last Updated: August 26, 2026 &mdash; 11:10 AM MDT
-        </div>
-
-        <!-- Footer Branding -->
-        <div class="footer-branding">
-            <a href="https://wepaythefreight.com">WePayTheFreight.com</a>
-            <p>Free shipping. Free laughs. Free everything.</p>
-        </div>
-    </main>
 
 </body>
 </html>
