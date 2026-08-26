@@ -1,4 +1,4 @@
-<!-- FILENAME: music/concerts/index.html -->
+<!-- jamiestunes.com/concerts/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,104 +6,86 @@
 <meta charset="UTF-8">
 <title>The Concert Room</title>
 </head>
-
 <body style="margin:0;background:#0d0d0d;color:#ffffff;font-family:Arial, sans-serif;">
-
-<div id="header"></div>
-
-
-<div id="main" style="padding:20px;text-align:center;">
-
-    <h1 style="margin-top:10px;font-size:42px;letter-spacing:2px;">
-        The Concert Room
-    </h1>
-
-    <p style="font-size:20px;max-width:700px;margin:20px auto;line-height:1.6;">
-        Welcome to <strong>The Concert Room</strong> — your archive of full-length
-        classic concerts. More shows will be added soon.
-    </p>
-
-    <div style="margin-top:40px;">
-        <a href="AC-DC - Live At River Plate 2009.html"
-           style="display:block;color:#ffd700;font-size:24px;margin:15px 0;text-decoration:none;">
-           AC/DC – Live at River Plate (2009)
-        </a>
-        <a href="Amy Winehouse - Glastonbury 2008.html"
-           style="display:block;color:#ffd700;font-size:24px;margin:15px 0;text-decoration:none;">
-           Amy Winehouse – Glastonbury 2008
-        </a>
-        <a href="beegees-1997-lasvegas-onenightonly.html"
-           style="display:block;color:#ffd700;font-size:24px;margin:15px 0;text-decoration:none;">
-           Bee Gees – One Night Only (1997)
-        </a>
-        <a href="Bruce Springsteen and The E Street Band Live in New York City.html"
-           style="display:block;color:#ffd700;font-size:24px;margin:15px 0;text-decoration:none;">
-           Bruce Springsteen – Live in NYC (2000)
-        </a>
-        <a href="Lanie Gardner - A Songwriter’s Diary, Bonfire Sessions.html"
-           style="display:block;color:#ffd700;font-size:24px;margin:15px 0;text-decoration:none;">
-           Lanie Gardner – Bonfire Sessions
-        </a>
-    </div>
-
+<div id="concertSidebar"></div>
+<div id="concertHeader"></div>
+<div class="page-wrapper">
+<main class="content" style="padding:40px;text-align:center;">
+<h1 style="margin-top:10px;font-size:42px;letter-spacing:2px;">
+The Concert Room
+</h1>
+<p style="font-size:20px;max-width:700px;margin:20px auto;line-height:1.6;">
+Welcome to <strong>The Concert Room</strong> — your archive of full-length classic concerts. More shows will be added soon.
+</p>
+<div style="margin-top:40px;">
+<a href="AC-DC - Live At River Plate 2009.html" style="display:block;color:#ffd700;font-size:24px;margin:15px 0;text-decoration:none;">
+AC/DC – Live at River Plate (2009)
+</a>
+<a href="Amy Winehouse - Glastonbury 2008.html" style="display:block;color:#ffd700;font-size:24px;margin:15px 0;text-decoration:none;">
+Amy Winehouse – Glastonbury 2008
+</a>
+<a href="beegees-1997-lasvegas-onenightonly.html" style="display:block;color:#ffd700;font-size:24px;margin:15px 0;text-decoration:none;">
+Bee Gees – One Night Only (1997)
+</a>
+<a href="Bruce Springsteen and The E Street Band Live in New York City.html" style="display:block;color:#ffd700;font-size:24px;margin:15px 0;text-decoration:none;">
+Bruce Springsteen – Live in NYC (2000)
+</a>
+<a href="Lanie Gardner - A Songwriter’s Diary, Bonfire Sessions.html" style="display:block;color:#ffd700;font-size:24px;margin:15px 0;text-decoration:none;">
+Lanie Gardner – Bonfire Sessions
+</a>
+<a href="george-strait-live-2021.html" style="display:block;color:#ffd700;font-size:24px;margin:15px 0;text-decoration:none;">
+George Strait – Live at Allegiant Stadium (2021)
+</a>
 </div>
-  <div class="meta-info">
-                Last Updated: August 26, 2026 &mdash; 11:52 AM MDT
-            </div>
+<div class="meta-info">
+Last Updated: August 26, 2026 &mdash; 11:52 AM MDT
+</div>
+<!-- DYNAMIC FOOTER CONTAINER -->
+<div id="footer"></div>
+</main>
+</div>
+<script>
+async function loadLayoutPartials() {
+  try {
+    const sidebarRes = await fetch('https://jamiestunes.com/concerts/concerts-sidebar.html');
+    if (sidebarRes.ok) {
+      document.getElementById('concertSidebar').innerHTML = await sidebarRes.text();
+    }
+  } catch (e) {
+    console.error("Sidebar load error:", e);
+  }
 
-            <!-- DYNAMIC FOOTER CONTAINER -->
-            <div id="footer"></div>
-        </main>
-    </div>
+  try {
+    const headerRes = await fetch('https://jamiestunes.com/concerts/concerts-header.html');
+    if (headerRes.ok) {
+      document.getElementById('concertHeader').innerHTML = await headerRes.text();
+    }
+  } catch (e) {
+    console.error("Header load error:", e);
+  }
 
-    <!-- LAYOUT FETCHER WITH CORRECTED HEADER ASSIGNMENT -->
-    <script>
-        async function loadLayoutPartials() {
-            try {
-                const sidebarRes = await fetch('https://jamiestunes.com/concerts/concerts-sidebar.html');
-                if (sidebarRes.ok) {
-                    document.getElementById('concertSidebar').innerHTML = await sidebarRes.text();
-                }
-            } catch (e) {
-                console.error("Sidebar load error:", e);
-            }
-
-            try {
-                const headerRes = await fetch('https://jamiestunes.com/concerts/concerts-header.html');
-                if (headerRes.ok) {
-                    document.getElementById('concertHeader').innerHTML = await headerRes.text();
-                }
-            } catch (e) {
-                console.error("Header load error:", e);
-            }
-
-            try {
-                const footerRes = await fetch('https://jamiestunes.com/concerts/concerts-footer.html');
-                if (footerRes.ok) {
-                    document.getElementById('footer').innerHTML = await footerRes.text();
-
-                    // NOW the footer exists — safe to run the counter
-                    const domain = window.location.hostname.replace(/\./g, "_");
-                    const page = window.location.pathname.replace(/\//g, "_") || "home";
-                    const counterKey = "pv_" + domain + "_" + page;
-
-                    let views = localStorage.getItem(counterKey);
-                    views = views ? parseInt(views) + 1 : 1;
-                    localStorage.setItem(counterKey, views);
-
-                    const counterEl = document.getElementById("viewCounter");
-                    if (counterEl) {
-                        counterEl.innerText = "Views: " + views;
-                    }
-                }
-            } catch (err) {
-                console.error("Footer failed to load:", err);
-            }
-        }
-
-        loadLayoutPartials();
-    </script>
-
-<!-- END OF FILE: music/concerts/index.html -->
+  try {
+    const footerRes = await fetch('https://jamiestunes.com/concerts/concerts-footer.html');
+    if (footerRes.ok) {
+      document.getElementById('footer').innerHTML = await footerRes.text();
+      
+      const domain = window.location.hostname.replace(/\./g, "_");
+      const page = window.location.pathname.replace(/\//g, "_") || "home";
+      const counterKey = "pv_" + domain + "_" + page;
+      let views = localStorage.getItem(counterKey);
+      views = views ? parseInt(views) + 1 : 1;
+      localStorage.setItem(counterKey, views);
+      
+      const counterEl = document.getElementById("viewCounter");
+      if (counterEl) {
+        counterEl.innerText = "Views: " + views;
+      }
+    }
+  } catch (err) {
+    console.error("Footer failed to load:", err);
+  }
+}
+loadLayoutPartials();
+</script>
 </body>
 </html>
