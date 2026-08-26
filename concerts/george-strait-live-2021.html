@@ -23,6 +23,22 @@
             flex-direction: column;
             min-height: 100vh;
         }
+        /* Hard Link Styling */
+        a {
+            color: var(--accent-color);
+            font-weight: bold;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.2s ease, background-color 0.2s ease;
+        }
+        a:hover, a:focus {
+            color: #ffffff;
+            background-color: rgba(77, 166, 255, 0.15);
+            outline: none;
+        }
+        a:visited {
+            color: #8cb8ff;
+        }
         /* Layout Wrapper to handle sidebar + main content grid */
         .page-wrapper {
             display: flex;
@@ -207,7 +223,7 @@
             <p><strong>The Ace in the Hole Band</strong> — The foundational backing ensemble providing the authentic twin-fiddle and steel-guitar-driven sound that anchors every Strait performance.</p>
 
             <div class="meta-info">
-                Last Updated: August 26, 2026 &mdash; 11:39 AM MDT
+                Last Updated: August 26, 2026 &mdash; 11:46 AM MDT
             </div>
 
             <!-- DYNAMIC FOOTER CONTAINER -->
@@ -215,11 +231,11 @@
         </main>
     </div>
 
-    <!-- SAFE ROOT-ABSOLUTE LAYOUT FETCHER -->
+    <!-- HARD DOMAIN-BASED LAYOUT FETCHER -->
     <script>
         async function loadLayoutPartials() {
             try {
-                const sidebarRes = await fetch('/concerts/concerts-sidebar.html');
+                const sidebarRes = await fetch('https://jamiestunes.com/concerts/concerts-sidebar.html');
                 if (sidebarRes.ok) {
                     document.getElementById('concertSidebar').innerHTML = await sidebarRes.text();
                 }
@@ -228,7 +244,7 @@
             }
 
             try {
-                const headerRes = await fetch('/concerts/concerts-header.html');
+                const headerRes = await fetch('https://jamiestunes.com/concerts/concerts-header.html');
                 if (headerRes.ok) {
                     document.getElementById('concertHeader').innerHTML = await headerRes.text();
                 }
@@ -237,7 +253,7 @@
             }
 
             try {
-                const footerRes = await fetch('/footer.html');
+                const footerRes = await fetch('https://jamiestunes.com/concerts/footer.html');
                 if (footerRes.ok) {
                     document.getElementById('footer').innerHTML = await footerRes.text();
 
