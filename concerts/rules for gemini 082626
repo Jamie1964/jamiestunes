@@ -1,0 +1,22 @@
+
+Here are the established rules and standards we have set up for your web development portfolio across your domains (jamiestunes.com, jamiespages.com, wepaythefreight.com, giggle-factory.com, free-casino-chips.com, and nellyi.com):
+
+1. File Naming & Documentation
+Filename Header: Every file we work on must start with its full path and filename as the very first line in a comment (e.g., <!-- [jamiestunes.com/concerts/concerts-footer.html](https://jamiestunes.com/concerts/concerts-footer.html) -->).
+
+2. Architecture & Layout Structure
+Modular Includes: Layouts utilize separated, reusable components (such as sidebars, headers, and footers) fetched or included dynamically to maintain clean codebases.
+
+Consistent Sizing & Offsets: Pages featuring fixed sidebar navigation (typically set to a width of 260px) must apply a matching margin offset (e.g., margin-left: 260px;) to the main content container and footers to prevent overlap.
+
+Dark Theme Standard: A consistent dark aesthetic is used across properties (e.g., deep charcoal/black background #0d0d0d, high-contrast text, gold accents).
+
+3. Footers & Branding
+Footer Components: Footers include centralized branding logos, the dynamic #viewCounter element linked to your Cloudflare Worker/KV setup, and a standardized copyright line.
+
+Copyright Format: Copyright notices feature a small, subtle link pointing directly back to the main hub (jamiespages.com).
+
+4. Code Quality & Standards
+Inline CSS: Styles are kept inline or organized cleanly for ease of deployment via Cloudflare Pages and GitHub repositories without complex external build pipelines.
+
+Absolute URLs: Links and asset paths use absolute structures to ensure they resolve properly regardless of nested subdirectories.
