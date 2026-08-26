@@ -13,7 +13,6 @@
             --accent-color: #4da6ff;
             --border-color: #333333;
         }
-
         body {
             margin: 0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -22,46 +21,15 @@
             display: flex;
             min-height: 100vh;
         }
-
-        /* Sidebar Navigation */
-        aside {
+        /* Sidebar Navigation Container */
+        #sidebar {
             width: 280px;
             background-color: var(--sidebar-bg);
             border-right: 1px solid var(--border-color);
-            padding: 20px;
-            box-sizing: border-box;
             position: fixed;
             height: 100vh;
             overflow-y: auto;
         }
-
-        aside h2 {
-            font-size: 1.2rem;
-            margin-top: 20px;
-            color: #ffffff;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 8px;
-        }
-
-        aside a {
-            display: block;
-            color: var(--text-color);
-            text-decoration: none;
-            padding: 8px 0;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
-
-        aside a:hover {
-            color: var(--accent-color);
-        }
-
-        aside a.home-link {
-            font-weight: bold;
-            font-size: 1.1rem;
-            color: #ffffff;
-        }
-
         /* Main Content Area */
         main {
             margin-left: 280px;
@@ -70,13 +38,11 @@
             max-width: 900px;
             box-sizing: border-box;
         }
-
         h1 {
             font-size: 2rem;
             margin-top: 0;
             color: #ffffff;
         }
-
         h2 {
             font-size: 1.5rem;
             margin-top: 30px;
@@ -84,16 +50,13 @@
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 5px;
         }
-
         p, li {
             line-height: 1.6;
             color: #cccccc;
         }
-
         ul {
             padding-left: 20px;
         }
-
         /* Video Container */
         .video-container {
             position: relative;
@@ -106,7 +69,6 @@
             overflow: hidden;
             border: 1px solid var(--border-color);
         }
-
         .video-container iframe {
             position: absolute;
             top: 0;
@@ -115,7 +77,6 @@
             height: 100%;
             border: 0;
         }
-
         /* Concert Details Grid */
         .concert-details {
             display: grid;
@@ -127,15 +88,12 @@
             border: 1px solid var(--border-color);
             margin-bottom: 30px;
         }
-
         .concert-details p {
             margin: 0;
         }
-
         .concert-details strong {
             color: #ffffff;
         }
-
         /* Footer Branding */
         .footer-branding {
             margin-top: 50px;
@@ -143,32 +101,28 @@
             border-top: 1px solid var(--border-color);
             text-align: center;
         }
-
         .footer-branding a {
             text-decoration: none;
             color: var(--accent-color);
             font-size: 1.5rem;
             font-weight: bold;
         }
-
         .footer-branding p {
             margin: 5px 0 0 0;
             font-size: 0.9rem;
             color: #888888;
         }
-
         .meta-info {
             font-size: 0.85rem;
             color: #777777;
             margin-top: 40px;
         }
-
         /* Responsive */
         @media (max-width: 768px) {
             body {
                 flex-direction: column;
             }
-            aside {
+            #sidebar {
                 position: relative;
                 width: 100%;
                 height: auto;
@@ -182,18 +136,8 @@
 </head>
 <body>
 
-    <!-- Sidebar Navigation -->
-    <aside>
-        <a href="https://jamiestunes.com/" class="home-link">HOME</a>
-        <h2>Concerts</h2>
-        <a href="https://jamiestunes.com/concerts/ac-dc-live-at-river-plate-2009.html">AC/DC – Live at River Plate (2009)</a>
-        <a href="https://jamiestunes.com/concerts/amy-winehouse-glastonbury-2008.html">Amy Winehouse – Glastonbury 2008</a>
-        <a href="https://jamiestunes.com/concerts/bee-gees-one-night-only-1997.html">Bee Gees – One Night Only (1997)</a>
-        <a href="https://jamiestunes.com/concerts/bruce-springsteen-live-in-nyc-2000.html">Bruce Springsteen – Live in NYC (2000)</a>
-        <a href="https://jamiestunes.com/concerts/dire-straits-rockpop-in-concert-1980.html">Dire Straits – Rockpop In Concert (1980)</a>
-        <a href="https://jamiestunes.com/concerts/george-strait-live-2021.html" style="color: var(--accent-color);">George Strait – Live at Allegiant Stadium (2021)</a>
-        <a href="https://jamiestunes.com/concerts/lanie-gardner-bonfire-sessions.html">Lanie Gardner – Bonfire Sessions</a>
-    </aside>
+    <!-- Sidebar Container loaded dynamically -->
+    <div id="sidebar"></div>
 
     <!-- Main Content -->
     <main>
@@ -232,7 +176,7 @@
         <p><strong>The Ace in the Hole Band</strong> — The foundational backing ensemble providing the authentic twin-fiddle and steel-guitar-driven sound that anchors every Strait performance.</p>
 
         <div class="meta-info">
-            views: 1 &bull; Last Updated: August 26, 2026 — 9:00 AM MDT
+            views: 1 &bull; Last Updated: August 26, 2026 &mdash; 9:00 AM MDT
         </div>
 
         <!-- Footer Branding -->
@@ -242,5 +186,13 @@
         </div>
     </main>
 
+    <script>
+        // Fetch the shared sidebar dynamically
+        fetch('/concerts/concerts-sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar').innerHTML = data;
+            });
+    </script>
 </body>
 </html>
