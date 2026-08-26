@@ -207,18 +207,15 @@
             <p><strong>The Ace in the Hole Band</strong> — The foundational backing ensemble providing the authentic twin-fiddle and steel-guitar-driven sound that anchors every Strait performance.</p>
 
             <div class="meta-info">
-                views: 1 &bull; Last Updated: August 26, 2026 &mdash; 11:20 AM MDT
+                Last Updated: August 26, 2026 &mdash; 11:35 AM MDT
             </div>
 
-            <!-- Footer Branding -->
-            <div class="footer-branding">
-                <a href="https://wepaythefreight.com">WePayTheFreight.com</a>
-                <p>Free shipping. Free laughs. Free everything.</p>
-            </div>
+            <!-- DYNAMIC FOOTER CONTAINER -->
+            <div id="footer"></div>
         </main>
     </div>
 
-    <!-- SAFE COMBINED LAYOUT FETCHER -->
+    <!-- SIDEBAR, HEADER & FOOTER FETCH SCRIPTS -->
     <script>
         async function loadLayoutPartials() {
             try {
@@ -237,6 +234,29 @@
                 }
             } catch (e) {
                 console.error("Header load error:", e);
+            }
+
+            try {
+                const footerRes = await fetch('../footer.html');
+                if (footerRes.ok) {
+                    document.getElementById('footer').innerHTML = await footerRes.text();
+
+                    // NOW the footer exists — safe to run the counter
+                    const domain = window.location.hostname.replace(/\./g, "_");
+                    const page = window.location.pathname.replace(/\//g, "_") || "home";
+                    const counterKey = "pv_" + domain + "_" + page;
+
+                    let views = localStorage.getItem(counterKey);
+                    views = views ? parseInt(views) + 1 : 1;
+                    localStorage.setItem(counterKey, views);
+
+                    const counterEl = document.getElementById("viewCounter");
+                    if (counterEl) {
+                        counterEl.innerText = "Views: " + views;
+                    }
+                }
+            } catch (err) {
+                console.error("Footer failed to load:", err);
             }
         }
         loadLayoutPartials();
