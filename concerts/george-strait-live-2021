@@ -184,15 +184,15 @@
 
     <!-- Sidebar Navigation -->
     <aside>
-        <a href="/" class="home-link">HOME</a>
+        <a href="https://jamiestunes.com/" class="home-link">HOME</a>
         <h2>Concerts</h2>
-        <a href="/concerts/ac-dc-live-at-river-plate-2009">AC/DC – Live at River Plate (2009)</a>
-        <a href="/concerts/amy-winehouse-glastonbury-2008">Amy Winehouse – Glastonbury 2008</a>
-        <a href="/concerts/bee-gees-one-night-only-1997">Bee Gees – One Night Only (1997)</a>
-        <a href="/concerts/bruce-springsteen-live-in-nyc-2000">Bruce Springsteen – Live in NYC (2000)</a>
-        <a href="/concerts/dire-straits-rockpop-in-concert-1980">Dire Straits – Rockpop In Concert (1980)</a>
-        <a href="/concerts/george-strait-live-2021" style="color: var(--accent-color);">George Strait – Live at Allegiant Stadium (2021)</a>
-        <a href="/concerts/lanie-gardner-bonfire-sessions">Lanie Gardner – Bonfire Sessions</a>
+        <a href="https://jamiestunes.com/concerts/ac-dc-live-at-river-plate-2009">AC/DC – Live at River Plate (2009)</a>
+        <a href="https://jamiestunes.com/concerts/amy-winehouse-glastonbury-2008">Amy Winehouse – Glastonbury 2008</a>
+        <a href="https://jamiestunes.com/concerts/bee-gees-one-night-only-1997">Bee Gees – One Night Only (1997)</a>
+        <a href="https://jamiestunes.com/concerts/bruce-springsteen-live-in-nyc-2000">Bruce Springsteen – Live in NYC (2000)</a>
+        <a href="https://jamiestunes.com/concerts/dire-straits-rockpop-in-concert-1980">Dire Straits – Rockpop In Concert (1980)</a>
+        <a href="https://jamiestunes.com/concerts/george-strait-live-2021" style="color: var(--accent-color);">George Strait – Live at Allegiant Stadium (2021)</a>
+        <a href="https://jamiestunes.com/concerts/lanie-gardner-bonfire-sessions">Lanie Gardner – Bonfire Sessions</a>
     </aside>
 
     <!-- Main Content -->
