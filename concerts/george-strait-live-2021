@@ -141,20 +141,28 @@
     <div id="concertSidebar"></div>
     <script>
         fetch("/concerts/concerts-sidebar.html")
-            .then(r => r.text())
+            .then(r => {
+                if (!r.ok) throw new Error("Sidebar not found");
+                return r.text();
+            })
             .then(html => {
                 document.getElementById('concertSidebar').innerHTML = html;
-            });
+            })
+            .catch(err => console.error("Error loading sidebar:", err));
     </script>
 
-    <!-- HEADER LOADER (Optional if used across your template) -->
+    <!-- HEADER LOADER -->
     <div id="concertHeader"></div>
     <script>
         fetch("/concerts/concerts-header.html")
-            .then(r => r.text())
+            .then(r => {
+                if (!r.ok) throw new Error("Header not found");
+                return r.text();
+            })
             .then(html => {
                 document.getElementById('concertHeader').innerHTML = html;
-            });
+            })
+            .catch(err => console.error("Error loading header:", err));
     </script>
 
     <!-- Main Content -->
@@ -194,7 +202,7 @@
         <p><strong>The Ace in the Hole Band</strong> — The foundational backing ensemble providing the authentic twin-fiddle and steel-guitar-driven sound that anchors every Strait performance.</p>
 
         <div class="meta-info">
-            views: 1 &bull; Last Updated: August 26, 2026 &mdash; 9:50 AM MDT
+            views: 1 &bull; Last Updated: August 26, 2026 &mdash; 10:14 AM MDT
         </div>
 
         <!-- Footer Branding -->
