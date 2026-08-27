@@ -82,7 +82,7 @@
     <div id="concertSidebar"></div>
     <script>
         fetch("concerts-sidebar.html")
-            .text()
+            .then(r => r.text())
             .then(html => { document.getElementById('concertSidebar').innerHTML = html; });
     </script>
 
@@ -90,7 +90,7 @@
     <div id="concertHeader"></div>
     <script>
         fetch("concerts-header.html")
-            .text()
+            .then(r => r.text())
             .then(html => { document.getElementById('concertHeader').innerHTML = html; });
     </script>
 
@@ -137,14 +137,14 @@
 
         <!-- LAST UPDATED (Bottom Only) -->
         <div style="text-align:center; margin-bottom:40px; color:#777;">
-            Last Updated: August 27, 2026 — 10:28 AM MDT
+            Last Updated: August 27, 2026 — 10:35 AM MDT
         </div>
 
         <!-- FOOTER LOADER -->
         <div id="concertFooter"></div>
         <script>
             fetch("concerts-footer.html")
-                .text()
+                .then(r => r.text())
                 .then(html => { document.getElementById('concertFooter').innerHTML = html; });
         </script>
     </div>
