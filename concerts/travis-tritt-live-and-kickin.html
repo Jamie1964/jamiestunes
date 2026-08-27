@@ -1,0 +1,153 @@
+<!-- https://jamiestunes.com/concerts/travis-tritt-live-and-kickin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- https://jamiestunes.com/concerts/travis-tritt-live-and-kickin.html -->
+    
+    <!-- PORTABLE SEO BLOCK -->
+    <title>Travis Tritt: Live & Kickin' (Full Concert)</title>
+    <meta name="description" content="Watch Travis Tritt's electrifying Live & Kickin' full concert performance. Experience Southern rock-infused country hits, powerhouse vocals, and live energy.">
+    <meta name="keywords" content="Travis Tritt Live and Kickin, Travis Tritt full concert live, T-R-O-U-B-L-E live, It's a Great Day to Be Alive live">
+    
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Travis Tritt: Live & Kickin' (Full Concert)">
+    <meta property="og:description" content="Experience country music powerhouse Travis Tritt performing his signature hits live in concert.">
+    <meta property="og:type" content="video.other">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Travis Tritt: Live & Kickin' (Full Concert)">
+    <meta name="twitter:description" content="Watch the full Live & Kickin' concert performance by country music star Travis Tritt.">
+    
+    <!-- PORTABLE JSON-LD STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MusicEvent",
+        "name": "Travis Tritt - Live & Kickin'",
+        "startDate": "2000-01-01",
+        "location": {
+            "@type": "Place",
+            "name": "Live Concert Stage",
+            "address": "USA"
+        },
+        "performer": {
+            "@type": "MusicGroup",
+            "name": "Travis Tritt"
+        },
+        "description": "An explosive full-length live concert video capturing Grammy-winning country artist Travis Tritt delivering his signature blend of outlaw country and Southern rock."
+    }
+    </script>
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0d0d0d;
+            color: #fff;
+        }
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-left: 280px; /* space for sidebar */
+        }
+        .video-container {
+            text-align: center;
+            margin: 30px 0;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .video-embed {
+            width: 560px;
+            height: 315px;
+            border: 0;
+        }
+        .details-box {
+            background: #141414;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SIDEBAR LOADER -->
+    <div id="concertSidebar"></div>
+    <script>
+        fetch("concerts-sidebar.html")
+            .then(r => r.text())
+            .then(html => { document.getElementById('concertSidebar').innerHTML = html; });
+    </script>
+
+    <!-- HEADER LOADER -->
+    <div id="concertHeader"></div>
+    <script>
+        fetch("concerts-header.html")
+            .then(r => r.text())
+            .then(html => { document.getElementById('concertHeader').innerHTML = html; });
+    </script>
+
+    <div class="content">
+        <!-- YOUTUBE VIDEO -->
+        <div class="video-container">
+            <iframe class="video-embed" src="https://www.youtube.com/embed/eAhQxxr334E?si=TN-9GNI63VfgEvz6" title="Travis Tritt: Live & Kickin' | Full Concert" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- CONCERT DETAILS -->
+        <div class="details-box">
+            <h2 style="color:#66ccff;text-align:center;margin-bottom:20px;">Concert Details</h2>
+            <p><strong>Artist:</strong> Travis Tritt</p>
+            <p><strong>Concert Name:</strong> Live & Kickin'</p>
+            <p><strong>Date:</strong> Concert Special Era</p>
+            <p><strong>Venue:</strong> Live Tour Stage</p>
+            <p><strong>Event Type:</strong> Full-Length Live Concert Recording</p>
+            
+            <h3 style="color:#66ccff;margin-top:25px;margin-bottom:10px;">Background & Performance Notes</h3>
+            <p>Renowned for his distinctively bluesy baritone vocals, long hair, and high-octane blend of traditional country and Southern rock attitude, Travis Tritt commands the stage in this explosive *Live & Kickin'* concert special. As one of the leading figures of country music's monumental early-1990s boom, Tritt brings unmatched energy, stellar guitar work, and raw emotional depth to every song, treating fans to a masterclass in modern outlaw performance.</p>
+            
+            <h3 style="color:#66ccff;margin-top:25px;margin-bottom:10px;">Setlist & Musical Highlights</h3>
+            <p>This powerhouse setlist packs a serious punch, featuring career-defining smash hits and crowd favorites like "T-R-O-U-B-L-E," "It's a Great Day to Be Alive," "Anymore," "Modern Day Bonnie and Clyde," "Foolish Pride," and "Country Club." His fiery guitar solos and soul-stirring vocal delivery keep the audience completely captivated from the first chord.</p>
+            
+            <h3 style="color:#66ccff;margin-top:25px;margin-bottom:10px;">Fun Facts & Legacy Trivia</h3>
+            <ul style="font-size:18px;line-height:1.6;color:#fff;">
+                <li>Travis Tritt is a multi-Grammy Award winner and Grand Ole Opry member, celebrated for helping pioneer the genre-bending 'hat acts' era of country music.</li>
+                <li>His gritty, blues-influenced vocal style was heavily inspired by classic Southern rock legends like the Allman Brothers Band and Waylon Jennings.</li>
+                <li>Concert specials like *Live & Kickin'* capture the raw electricity of his touring band, cementing his reputation as one of country music's most dynamic live entertainers.</li>
+            </ul>
+        </div>
+
+        <!-- LOCALSTORAGE COUNTER -->
+        <div style="text-align:center; margin:40px 0; color:#ccc; font-size:18px;">
+            Views: <span id="pageCounter">0</span>
+        </div>
+        <script>
+            let pageId = "travis-tritt-live-and-kickin";
+            let count = localStorage.getItem(pageId) || 0;
+            count++;
+            localStorage.setItem(pageId, count);
+            document.getElementById("pageCounter").innerText = count;
+        </script>
+
+        <!-- LAST UPDATED (Bottom Only) -->
+        <div style="text-align:center; margin-bottom:40px; color:#777;">
+            Last Updated: August 27, 2026 — 10:45 AM MDT
+        </div>
+
+        <!-- FOOTER LOADER -->
+        <div id="concertFooter"></div>
+        <script>
+            fetch("concerts-footer.html")
+                .then(r => r.text())
+                .then(html => { document.getElementById('concertFooter').innerHTML = html; });
+        </script>
+    </div>
+
+</body>
+</html>
