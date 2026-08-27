@@ -1,0 +1,153 @@
+<!-- https://jamiestunes.com/concerts/chicago-live-at-tanglewood-1970.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- https://jamiestunes.com/concerts/chicago-live-at-tanglewood-1970.html -->
+    
+    <!-- PORTABLE SEO BLOCK -->
+    <title>Chicago: Live at Tanglewood 1970 (Full Concert Experience)</title>
+    <meta name="description" content="Watch Chicago's legendary vintage 1970 live concert performance at Tanglewood. Experience groundbreaking horn-rock, jazz-fusion, and classic early era hits.">
+    <meta name="keywords" content="Chicago Live at Tanglewood 1970, Chicago band vintage concert, 25 or 6 to 4 live 1970, Beginnings live Tanglewood">
+    
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Chicago: Live at Tanglewood 1970 (Full Concert)">
+    <meta property="og:description" content="Experience vintage Chicago performing live at Tanglewood in 1970 in this incredible full concert archive.">
+    <meta property="og:type" content="video.other">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chicago: Live at Tanglewood 1970 (Full Concert)">
+    <meta name="twitter:description" content="Watch the classic 1970 concert performance by Chicago live at Tanglewood.">
+    
+    <!-- PORTABLE JSON-LD STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MusicEvent",
+        "name": "Chicago - Live at Tanglewood",
+        "startDate": "1970-01-01",
+        "location": {
+            "@type": "Place",
+            "name": "Tanglewood Music Center",
+            "address": "Lenox, MA, USA"
+        },
+        "performer": {
+            "@type": "MusicGroup",
+            "name": "Chicago"
+        },
+        "description": "An extraordinary archival concert recording capturing the legendary rock band at the height of their early creative powers live at Tanglewood in 1970."
+    }
+    </script>
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0d0d0d;
+            color: #fff;
+        }
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-left: 280px; /* space for sidebar */
+        }
+        .video-container {
+            text-align: center;
+            margin: 30px 0;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .video-embed {
+            width: 560px;
+            height: 315px;
+            border: 0;
+        }
+        .details-box {
+            background: #141414;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SIDEBAR LOADER -->
+    <div id="concertSidebar"></div>
+    <script>
+        fetch("concerts-sidebar.html")
+            .then(r => r.text())
+            .then(html => { document.getElementById('concertSidebar').innerHTML = html; });
+    </script>
+
+    <!-- HEADER LOADER -->
+    <div id="concertHeader"></div>
+    <script>
+        fetch("concerts-header.html")
+            .then(r => r.text())
+            .then(html => { document.getElementById('concertHeader').innerHTML = html; });
+    </script>
+
+    <div class="content">
+        <!-- YOUTUBE VIDEO -->
+        <div class="video-container">
+            <iframe class="video-embed" src="https://www.youtube.com/embed/Hoo72BGB4KE?si=O2K8EFE7xNLTJ7X9" title="Chicago: Live at Tanglewood 1970 (Full Concert Experience)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- CONCERT DETAILS -->
+        <div class="details-box">
+            <h2 style="color:#66ccff;text-align:center;margin-bottom:20px;">Concert Details</h2>
+            <p><strong>Artist:</strong> Chicago</p>
+            <p><strong>Concert Name:</strong> Live at Tanglewood</p>
+            <p><strong>Date:</strong> 1970</p>
+            <p><strong>Venue:</strong> Tanglewood Music Center, Lenox, MA</p>
+            <p><strong>Event Type:</strong> Vintage Live Concert Broadcast</p>
+            
+            <h3 style="color:#66ccff;margin-top:25px;margin-bottom:10px;">Background & Performance Notes</h3>
+            <p>Captured during their blazing formative years in 1970, this legendary performance at the historic Tanglewood venue showcases Chicago operating as an absolute powerhouse of experimental rock and jazz-fusion. Long before stadium tours and pop ballad dominance, the original lineup (Terry Kath, Robert Lamm, Peter Cetera, Danny Seraphine, Lee Loughnane, James Pankow, and Walter Parazaider) delivered raw, uninhibited musical wizardry that left audiences spellbound.</p>
+            
+            <h3 style="color:#66ccff;margin-top:25px;margin-bottom:10px;">Setlist & Musical Highlights</h3>
+            <p>This phenomenal setlist dives deep into their first two landmark albums (*Chicago Transit Authority* and *Chicago II*), featuring extended psychedelic jams, blistering horn arrangements, and passionate vocals on masterpieces like "25 or 6 to 4," "Beginnings," "Does Anybody Really Know What Time It Is?," and "Ballet for a Girl in Buchannon."</p>
+            
+            <h3 style="color:#66ccff;margin-top:25px;margin-bottom:10px;">Fun Facts & Legacy Trivia</h3>
+            <ul style="font-size:18px;line-height:1.6;color:#fff;">
+                <li>Guitar legend Jimi Hendrix was famously an enormous fan of Chicago during this era, frequently praising Terry Kath's unmatched guitar prowess and vocal style.</li>
+                <li>Tanglewood is traditionally the summer home of the Boston Symphony Orchestra, making rock acts performing on its stage in 1970 a groundbreaking cultural crossover.</li>
+                <li>This vintage concert recording stands as a holy grail for fans of early-70s progressive rock and brass-infused improvisational music.</li>
+            </ul>
+        </div>
+
+        <!-- LOCALSTORAGE COUNTER -->
+        <div style="text-align:center; margin:40px 0; color:#ccc; font-size:18px;">
+            Views: <span id="pageCounter">0</span>
+        </div>
+        <script>
+            let pageId = "chicago-live-at-tanglewood-1970";
+            let count = localStorage.getItem(pageId) || 0;
+            count++;
+            localStorage.setItem(pageId, count);
+            document.getElementById("pageCounter").innerText = count;
+        </script>
+
+        <!-- LAST UPDATED (Bottom Only) -->
+        <div style="text-align:center; margin-bottom:40px; color:#777;">
+            Last Updated: August 27, 2026 — 10:22 AM MDT
+        </div>
+
+        <!-- FOOTER LOADER -->
+        <div id="concertFooter"></div>
+        <script>
+            fetch("concerts-footer.html")
+                .then(r => r.text())
+                .then(html => { document.getElementById('concertFooter').innerHTML = html; });
+        </script>
+    </div>
+
+</body>
+</html>
