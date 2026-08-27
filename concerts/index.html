@@ -64,9 +64,22 @@ Welcome to <strong>The Concert Room</strong> - your archive of full-length class
 <div id="concertFooter"></div>
 
 <div class="meta-info" style="margin-top:40px;color:#777777;font-size:14px;text-align:center;">
-Last Updated: August 27, 2026 — 11:23 AM MDT
+Last Updated: August 27, 2026 — 11:24 AM MDT
 </div>
+
 </div>
+
+<script>
+fetch('concerts-sidebar.html')
+  .then(res => res.text())
+  .then(data => document.getElementById('concertSidebar').innerHTML = data);
+fetch('concerts-header.html')
+  .then(res => res.text())
+  .then(data => document.getElementById('concertHeader').innerHTML = data);
+fetch('concerts-footer.html')
+  .then(res => res.text())
+  .then(data => document.getElementById('concertFooter').innerHTML = data);
+</script>
 
 </body>
 </html>
