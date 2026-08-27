@@ -61,5 +61,11 @@ Welcome to <strong>The Concert Room</strong> - your archive of full-length class
 
 <div id="concertFooter"></div>
 
+<script>
+  fetch('concerts-sidebar.html').then(r => r.text()).then(d => document.getElementById('concertSidebar').innerHTML = d);
+  fetch('concerts-header.html').then(r => r.text()).then(d => document.getElementById('concertHeader').innerHTML = d);
+  fetch('concerts-footer.html').then(r => r.text()).then(d => document.getElementById('concertFooter').innerHTML = d);
+</script>
+
 </body>
 </html>
