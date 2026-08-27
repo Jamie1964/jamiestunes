@@ -1,0 +1,153 @@
+<!-- https://jamiestunes.com/concerts/chicago-live-park-city-2024.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- https://jamiestunes.com/concerts/chicago-live-park-city-2024.html -->
+    
+    <!-- PORTABLE SEO BLOCK -->
+    <title>Chicago - Live in Park City (Wichita) 2024 Full Concert</title>
+    <meta name="description" content="Watch Chicago's phenomenal 2024 tour performance live in Park City, Kansas (Wichita area). Enjoy legendary horn-driven classic rock anthems and timeless hits.">
+    <meta name="keywords" content="Chicago band Park City 2024, Chicago Wichita concert, 2024 tour live, Saturday in the Park live">
+    
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Chicago - Live in Park City (Wichita) 2024">
+    <meta property="og:description" content="Experience legendary rock band Chicago performing live on their 2024 tour in Park City, KS.">
+    <meta property="og:type" content="video.other">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chicago - Live in Park City (Wichita) 2024">
+    <meta name="twitter:description" content="Watch the full 2024 tour concert performance by Chicago in Park City, Kansas.">
+    
+    <!-- PORTABLE JSON-LD STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MusicEvent",
+        "name": "Chicago - Live in Park City (Wichita)",
+        "startDate": "2024-01-01",
+        "location": {
+            "@type": "Place",
+            "name": "Park City Arena",
+            "address": "Park City, KS, USA"
+        },
+        "performer": {
+            "@type": "MusicGroup",
+            "name": "Chicago"
+        },
+        "description": "An electrifying live concert performance capturing the legendary rock and roll band with horns delivering timeless hits on their 2024 tour."
+    }
+    </script>
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0d0d0d;
+            color: #fff;
+        }
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-left: 280px; /* space for sidebar */
+        }
+        .video-container {
+            text-align: center;
+            margin: 30px 0;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .video-embed {
+            width: 560px;
+            height: 315px;
+            border: 0;
+        }
+        .details-box {
+            background: #141414;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SIDEBAR LOADER -->
+    <div id="concertSidebar"></div>
+    <script>
+        fetch("concerts-sidebar.html")
+            .then(r => r.text())
+            .then(html => { document.getElementById('concertSidebar').innerHTML = html; });
+    </script>
+
+    <!-- HEADER LOADER -->
+    <div id="concertHeader"></div>
+    <script>
+        fetch("concerts-header.html")
+            .then(r => r.text())
+            .then(html => { document.getElementById('concertHeader').innerHTML = html; });
+    </script>
+
+    <div class="content">
+        <!-- YOUTUBE VIDEO -->
+        <div class="video-container">
+            <iframe class="video-embed" src="https://www.youtube.com/embed/NibSTlY7MM8?si=KV0Fiikkq0tYpJMi" title="Chicago - 2024 Tour - Full Concert, Park City, Ks. (Wichita)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- CONCERT DETAILS -->
+        <div class="details-box">
+            <h2 style="color:#66ccff;text-align:center;margin-bottom:20px;">Concert Details</h2>
+            <p><strong>Artist:</strong> Chicago</p>
+            <p><strong>Concert Name:</strong> 2024 Tour - Full Concert</p>
+            <p><strong>Date:</strong> 2024</p>
+            <p><strong>Venue:</strong> Park City Arena (Wichita Area), Park City, KS</p>
+            <p><strong>Event Type:</strong> Live Arena Tour Performance</p>
+            
+            <h3 style="color:#66ccff;margin-top:25px;margin-bottom:10px;">Background & Performance Notes</h3>
+            <p>Bringing their signature blend of rock, jazz fusion, and glorious horn arrangements to Kansas, the legendary band Chicago delivers a masterclass in live musicianship on their 2024 tour. Performing before an enthusiastic crowd in the Wichita area, the group showcases their timeless catalog with immaculate vocal harmonies, blistering brass sections, and high-energy stage presence.</p>
+            
+            <h3 style="color:#66ccff;margin-top:25px;margin-bottom:10px;">Setlist & Musical Highlights</h3>
+            <p>This stellar performance features triumphant renditions of their most beloved career-spanning hits, including energetic takes on "Saturday in the Park," "25 or 6 to 4," "You're the Inspiration," "Hard to Say I'm Sorry," and "Make Me Smile."</p>
+            
+            <h3 style="color:#66ccff;margin-top:25px;margin-bottom:10px;">Fun Facts & Legacy Trivia</h3>
+            <ul style="font-size:18px;line-height:1.6;color:#fff;">
+                <li>Formed in Chicago in 1967, the band is one of the longest-running and best-selling rock groups of all time, boasting record sales exceeding 100 million.</li>
+                <li>Chicago was inducted into the Rock and Roll Hall of Fame in 2016, cementing their profound influence on American pop and rock radio.</li>
+                <li>Their distinctive horn section—originally featuring trombone, trumpet, and saxophone—became the blueprint for horn-rock bands across the globe.</li>
+            </ul>
+        </div>
+
+        <!-- LOCALSTORAGE COUNTER -->
+        <div style="text-align:center; margin:40px 0; color:#ccc; font-size:18px;">
+            Views: <span id="pageCounter">0</span>
+        </div>
+        <script>
+            let pageId = "chicago-live-park-city-2024";
+            let count = localStorage.getItem(pageId) || 0;
+            count++;
+            localStorage.setItem(pageId, count);
+            document.getElementById("pageCounter").innerText = count;
+        </script>
+
+        <!-- LAST UPDATED (Bottom Only) -->
+        <div style="text-align:center; margin-bottom:40px; color:#777;">
+            Last Updated: August 27, 2026 — 10:20 AM MDT
+        </div>
+
+        <!-- FOOTER LOADER -->
+        <div id="concertFooter"></div>
+        <script>
+            fetch("concerts-footer.html")
+                .then(r => r.text())
+                .then(html => { document.getElementById('concertFooter').innerHTML = html; });
+        </script>
+    </div>
+
+</body>
+</html>
