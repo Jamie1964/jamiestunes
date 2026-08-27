@@ -2,112 +2,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael Jackson - Live At Wembley (July 16, 1988) | Jamie's Tunes</title>
-    <style>
-        body {
-            background-color: #121212;
-            color: #e0e0e0;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header, footer {
-            background-color: #1f1f1f;
-            text-align: center;
-            padding: 1.5rem;
-        }
-        h1, h2, h3 {
-            color: #1e90ff;
-        }
-        .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        .video-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%;
-            height: 0;
-            margin-bottom: 1.5rem;
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        .metadata {
-            background-color: #181818;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-        }
-        a {
-            color: #1e90ff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- PORTABLE SEO BLOCK -->
+<title>Michael Jackson - Live At Wembley (July 16, 1988) | Jamie's Tunes</title>
+<meta name="description" content="Legendary Michael Jackson Bad World Tour performance live at Wembley Stadium on July 16, 1988. Full video embed, production notes, setlist highlights, and historical significance.">
+<meta name="keywords" content="Michael Jackson, Live at Wembley, 1988, Bad World Tour, King of Pop, live music, concert archive">
+
+<!-- OpenGraph -->
+<meta property="og:title" content="Michael Jackson - Live At Wembley (July 16, 1988)">
+<meta property="og:description" content="Legendary Michael Jackson Bad World Tour performance live at Wembley Stadium on July 16, 1988.">
+<meta property="og:type" content="video.other">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Michael Jackson - Live At Wembley (July 16, 1988)">
+<meta name="twitter:description" content="Legendary Michael Jackson Bad World Tour performance live at Wembley Stadium on July 16, 1988.">
+
+<!-- PORTABLE JSON-LD STRUCTURED DATA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicEvent",
+  "name": "Michael Jackson - Live At Wembley Stadium",
+  "startDate": "1988-07-16",
+  "location": {
+    "@type": "Place",
+    "name": "Wembley Stadium",
+    "address": "London, United Kingdom"
+  },
+  "performer": {
+    "@type": "MusicGroup",
+    "name": "Michael Jackson"
+  },
+  "description": "Legendary Michael Jackson Bad World Tour performance live at Wembley Stadium on July 16, 1988."
+}
+</script>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0d0d0d;
+    color: #fff;
+}
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-left: 280px; /* space for sidebar */
+}
+.video-container {
+    text-align: center;
+    margin: 30px 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.video-embed {
+    width: 560px;
+    height: 315px;
+    border: 0;
+}
+.details-box {
+    background: #141414;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #fff;
+}
+</style>
 </head>
+
 <body>
 
-    <header>
-        <h1>Jamie's Concert Archives</h1>
-        <p>Live performances and musical history</p>
-    </header>
+<!-- SIDEBAR LOADER -->
+<div id="concertSidebar"></div>
+<script>
+fetch("concerts-sidebar.html")
+  .then(r => r.text())
+  .then(html => { document.getElementById('concertSidebar').innerHTML = html; });
+</script>
 
-    <div class="container">
-        <h2>Michael Jackson - Live At Wembley (July 16, 1988)</h2>
-        
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/9shByOh8fVE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
+<!-- HEADER LOADER -->
+<div id="concertHeader"></div>
+<script>
+fetch("concerts-header.html")
+  .then(r => r.text())
+  .then(html => { document.getElementById('concertHeader').innerHTML = html; });
+</script>
 
-        <div class="metadata">
-            <h3>Concert Details</h3>
-            <p><strong>Artist:</strong> Michael Jackson</p>
-            <p><strong>Event:</strong> Bad World Tour - Live at Wembley Stadium</p>
-            <p><strong>Date:</strong> July 16, 1988</p>
-            <p><strong>Views:</strong> 46M views</p>
-            <p><strong>Archived on:</strong> August 27, 2026 — 8:09 AM MDT</p>
-        </div>
+<div class="content">
 
-        <div>
-            <h3>Production Notes</h3>
-            <p>This legendary performance captures Michael Jackson at the height of his Bad World Tour, featuring iconic renditions of his greatest hits performed live in front of a packed stadium in London.</p>
-        </div>
+    <!-- YOUTUBE VIDEO -->
+    <div class="video-container">
+        <iframe class="video-embed" src="https://www.youtube.com/embed/9shByOh8fVE" title="Michael Jackson - Live At Wembley (July 16, 1988)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
     </div>
 
-    <footer>
-        <p>&copy; 2026 Jamie's Tunes. All rights reserved.</p>
-        <p id="page-counter">Page Views: <span id="view-count">1</span></p>
-    </footer>
+    <!-- CONCERT DETAILS -->
+    <div class="details-box">
 
+        <h2 style="color:#66ccff;text-align:center;margin-bottom:20px;">
+            Concert Details
+        </h2>
+
+        <p><strong>Artist:</strong> Michael Jackson</p>
+        <p><strong>Concert Name:</strong> Bad World Tour - Live at Wembley Stadium</p>
+        <p><strong>Date:</strong> July 16, 1988</p>
+        <p><strong>Venue:</strong> Wembley Stadium, London</p>
+        <p><strong>Views:</strong> 46M views</p>
+
+        <h3 style="color:#66ccff;margin-top:25px;margin-bottom:10px;">
+            Background & Production Notes
+        </h3>
+
+        <p>
+            Recorded live on July 16, 1988, at London's iconic Wembley Stadium, this performance stands as one of the definitive live documents of the King of Pop. Part of the record-breaking <strong>Bad World Tour</strong>, the concert was attended by 72,000 fans, including Prince Charles and Princess Diana.
+        </p>
+
+        <p>
+            The setlist features groundbreaking renditions of chart-topping hits from the <em>Bad</em> and <em>Thriller</em> albums, including "Wanna Be Startin' Somethin'", "Smooth Criminal", "Beat It", "Billie Jean", and "Man in the Mirror". Renowned for its flawless choreography, powerful live vocals, and unmatched stage production, the Wembley concert remains a masterclass in pop performance history.
+        </p>
+
+        <h3 style="color:#66ccff;margin-top:25px;margin-bottom:10px;">
+            Setlist Highlights & Performance Style
+        </h3>
+
+        <p>
+            Michael Jackson's stage presence during the Bad tour combined high-energy athletic choreography with precise vocal control. The performance captured the absolute peak of his solo touring career, featuring iconic costume changes, complex lighting designs, and legendary live band arrangements.
+        </p>
+
+        <h3 style="color:#66ccff;margin-top:25px;margin-bottom:10px;">
+            Fun Facts & Trivia
+        </h3>
+
+        <ul style="font-size:18px;line-height:1.6;color:#fff;">
+            <li>Attended by 72,000 ecstatic fans on opening night at Wembley, welcoming British royalty Prince Charles and Princess Diana.</li>
+            <li>The Bad World Tour was Michael Jackson's first solo concert tour, grossing over $125 million globally.</li>
+            <li>This specific July 16 show is widely considered by music historians and fans to be among the finest captured live recordings of his entire career.</li>
+            <li>Features the legendary debut live performances of several Billboard Hot 100 number-one hit singles.</li>
+        </ul>
+
+        <h3 style="color:#66ccff;margin-top:25px;margin-bottom:10px;">
+            Spotlight
+        </h3>
+
+        <p>
+            <strong>Michael Jackson</strong> — Lead vocals, dancer, and visionary artist. Universally celebrated as the King of Pop for his unmatched contributions to music, dance, and fashion.
+        </p>
+
+    </div>
+
+    <!-- LOCALSTORAGE COUNTER -->
+    <div style="text-align:center; margin:40px 0; color:#ccc; font-size:18px;">
+        Views: <span id="pageCounter">0</span>
+    </div>
     <script>
-        // Client-side browser localStorage view counter for the footer
-        (function() {
-            const key = 'jamies_tunes_concerts_mix_michael_jackson_views';
-            let views = localStorage.getItem(key);
-            if (views) {
-                views = parseInt(views, 10) + 1;
-            } else {
-                views = 1;
-            }
-            localStorage.setItem(key, views);
-            const counterElement = document.getElementById('view-count');
-            if (counterElement) {
-                counterElement.textContent = views;
-            }
-        })();
+        let pageId = "jamies_tunes_concerts_mix_michael_jackson_views";
+        let count = localStorage.getItem(pageId) || 0;
+        count++;
+        localStorage.setItem(pageId, count);
+        document.getElementById("pageCounter").innerText = count;
     </script>
+    
+    <!-- FILE: mix-michael-jackson-live-at-wembley-july-16-1988.html -->
+
+    <!-- LAST UPDATED (Bottom Only) -->
+    <div style="text-align:center; margin-bottom:40px; color:#777;">
+        Last Updated: August 27, 2026 — 8:12 AM MDT
+    </div>
+
+    <!-- FOOTER LOADER -->
+    <div id="concertFooter"></div>
+    <script>
+    fetch("concerts-footer.html")
+      .then(r => r.text())
+      .then(html => { document.getElementById('concertFooter').innerHTML = html; });
+    </script>
+
+</div>
 
 </body>
 </html>
