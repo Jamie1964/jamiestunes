@@ -1,0 +1,153 @@
+<!-- https://jamiestunes.com/concerts/elvis-cbs-tv-special-1977.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- https://jamiestunes.com/concerts/elvis-cbs-tv-special-1977.html -->
+    
+    <!-- PORTABLE SEO BLOCK -->
+    <title>Elvis Presley - CBS TV Special (1977) High Definition Concert</title>
+    <meta name="description" content="Watch Elvis Presley's legendary final 1977 CBS TV special in high definition. Experience historic live performances from his final tour stops in Omaha and Rapid City.">
+    <meta name="keywords" content="Elvis CBS TV Special 1977, Elvis Presley live 1977 HD, Elvis in Concert CBS broadcast, Unchained Melody live 1977, Elvis final tour footage">
+    
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Elvis Presley - CBS TV Special (1977) HD">
+    <meta property="og:description" content="Experience the historic 1977 CBS concert television special documenting Elvis Presley's final concert tour.">
+    <meta property="og:type" content="video.other">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Elvis Presley - CBS TV Special (1977) HD">
+    <meta name="twitter:description" content="Watch the full restored 1977 CBS concert television special of Elvis Presley live.">
+    
+    <!-- PORTABLE JSON-LD STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MusicEvent",
+        "name": "Elvis Presley - CBS TV Special",
+        "startDate": "1977-10-03",
+        "location": {
+            "@type": "Place",
+            "name": "Omaha & Rapid City Tour Stops",
+            "address": "USA"
+        },
+        "performer": {
+            "@type": "MusicGroup",
+            "name": "Elvis Presley"
+        },
+        "description": "An archival high-definition presentation of Elvis Presley's final television concert special originally broadcast by CBS in October 1977."
+    }
+    </script>
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0d0d0d;
+            color: #fff;
+        }
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-left: 280px; /* space for sidebar */
+        }
+        .video-container {
+            text-align: center;
+            margin: 30px 0;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .video-embed {
+            width: 560px;
+            height: 315px;
+            border: 0;
+        }
+        .details-box {
+            background: #141414;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SIDEBAR LOADER -->
+    <div id="concertSidebar"></div>
+    <script>
+        fetch("concerts-sidebar.html")
+            .then(r => r.text())
+            .then(html => { document.getElementById('concertSidebar').innerHTML = html; });
+    </script>
+
+    <!-- HEADER LOADER -->
+    <div id="concertHeader"></div>
+    <script>
+        fetch("concerts-header.html")
+            .then(r => r.text())
+            .then(html => { document.getElementById('concertHeader').innerHTML = html; });
+    </script>
+
+    <div class="content">
+        <!-- YOUTUBE VIDEO -->
+        <div class="video-container">
+            <iframe class="video-embed" src="https://www.youtube.com/embed/2_A44IixILo?si=lGxMqPR_wXRZvhhn" title="Elvis CBS Tv Special 1977 High Definition" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- CONCERT DETAILS -->
+        <div class="details-box">
+            <h2 style="color:#66ccff;text-align:center;margin-bottom:20px;">Concert Details</h2>
+            <p><strong>Artist:</strong> Elvis Presley</p>
+            <p><strong>Concert Name:</strong> CBS Television Special (Elvis in Concert)</p>
+            <p><strong>Original Air Date:</strong> October 3, 1977</p>
+            <p><strong>Recorded:</strong> June 19 (Omaha, NE) & June 21, 1977 (Rapid City, SD)</p>
+            <p><strong>Event Type:</strong> Posthumous Network Television Concert Special</p>
+            
+            <h3 style="color:#66ccff;margin-top:25px;margin-bottom:10px;">Background & Performance Notes</h3>
+            <p>Originally filmed by CBS during Elvis Presley's final summer 1977 tour across Omaha, Nebraska, and Rapid City, South Dakota, this historic television special serves as a poignant visual document of the King of Rock 'n' Roll's final stage performances. Though broadcast posthumously in October 1977 just weeks after his passing, the concert footage captures the immense warmth, powerful vocal command, and deep emotional rapport Elvis shared with his devoted fans right up to the end of his legendary career.</p>
+            
+            <h3 style="color:#66ccff;margin-top:25px;margin-bottom:10px;">Setlist & Musical Highlights</h3>
+            <p>The special features incredible live renditions of timeless classics and powerful late-career emotional highlights. Memorable performances include soaring vocal showcases on "Unchained Melody," "How Great Thou Art," "Are You Lonesome Tonight?", "You Gave Me a Mountain," and rock-and-roll standards like "See See Rider," "Jailhouse Rock," and "Hound Dog," backed by his longtime TCB Band and Joe Guercio's orchestra.</p>
+            
+            <h3 style="color:#66ccff;margin-top:25px;margin-bottom:10px;">Fun Facts & Legacy Trivia</h3>
+            <ul style="font-size:18px;line-height:1.6;color:#fff;">
+                <li>The CBS television broadcast drew massive ratings upon its initial airing in October 1977, becoming one of the most-watched network music specials of the era.</li>
+                <li>The accompanying live soundtrack album released simultaneously by RCA Records achieved massive commercial success, eventually reaching multi-platinum status.</li>
+                <li>This special remains one of the only officially filmed and recorded multi-camera concert productions capturing Elvis during his final touring years.</li>
+            </ul>
+        </div>
+
+        <!-- LOCALSTORAGE COUNTER -->
+        <div style="text-align:center; margin:40px 0; color:#ccc; font-size:18px;">
+            Views: <span id="pageCounter">0</span>
+        </div>
+        <script>
+            let pageId = "elvis-cbs-tv-special-1977";
+            let count = localStorage.getItem(pageId) || 0;
+            count++;
+            localStorage.setItem(pageId, count);
+            document.getElementById("pageCounter").innerText = count;
+        </script>
+
+        <!-- LAST UPDATED (Bottom Only) -->
+        <div style="text-align:center; margin-bottom:40px; color:#777;">
+            Last Updated: August 27, 2026 — 10:14 AM MDT
+        </div>
+
+        <!-- FOOTER LOADER -->
+        <div id="concertFooter"></div>
+        <script>
+            fetch("concerts-footer.html")
+                .then(r => r.text())
+                .then(html => { document.getElementById('concertFooter').innerHTML = html; });
+        </script>
+    </div>
+
+</body>
+</html>
