@@ -14,20 +14,34 @@
             flex-direction: column;
             min-height: 100vh;
         }
+        #header-slot {
+            width: 100%;
+            background: #121212;
+        }
         .main-layout {
             display: flex;
             flex: 1;
+            background: #121212;
         }
         #sidebar-slot {
             flex-shrink: 0;
+            background: #121212;
         }
         .content-area {
             flex-grow: 1;
             padding: 40px;
+            background: #121212;
+        }
+        #footer-slot {
+            width: 100%;
+            background: #121212;
         }
     </style>
 </head>
 <body>
+
+    <!-- Header Slot -->
+    <div id="header-slot"></div>
 
     <div class="main-layout">
         <!-- Sidebar Slot -->
@@ -45,6 +59,14 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            // Fetch and insert header
+            fetch('index-header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-slot').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
+
             // Fetch and insert sidebar
             fetch('index-sidebar.html')
                 .then(response => response.text())
