@@ -11,23 +11,22 @@
             color: #fff;
             font-family: sans-serif;
             display: flex;
-            flex-direction: column;
             min-height: 100vh;
-        }
-        #header-slot {
-            width: 100%;
-            background: #121212;
-        }
-        .main-layout {
-            display: flex;
-            flex: 1;
-            background: #121212;
-            align-items: stretch;
         }
         #sidebar-slot {
             flex-shrink: 0;
             background: #121212;
             display: flex;
+        }
+        .main-wrapper {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            background: #121212;
+        }
+        #header-slot {
+            width: 100%;
+            background: #121212;
         }
         .content-area {
             flex-grow: 1;
@@ -62,12 +61,13 @@
 </head>
 <body>
 
-    <!-- Header Slot -->
-    <div id="header-slot"></div>
+    <!-- Sidebar Slot (Starts at the absolute top of the page) -->
+    <div id="sidebar-slot"></div>
 
-    <div class="main-layout">
-        <!-- Sidebar Slot -->
-        <div id="sidebar-slot"></div>
+    <!-- Main Wrapper holding Header, Content, and Footer -->
+    <div class="main-wrapper">
+        <!-- Header Slot -->
+        <div id="header-slot"></div>
 
         <!-- Main Content Area -->
         <div class="content-area">
@@ -89,21 +89,13 @@
                 <p>Discover raw, captivating acoustic performances and incredible talent captured right out on the streets and sidewalks.</p>
             </div>
         </div>
-    </div>
 
-    <!-- Footer Slot -->
-    <div id="footer"></div>
+        <!-- Footer Slot -->
+        <div id="footer"></div>
+    </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Fetch and insert header
-            fetch('index-header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header-slot').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading header:', error));
-
             // Fetch and insert sidebar
             fetch('index-sidebar.html')
                 .then(response => response.text())
@@ -111,6 +103,14 @@
                     document.getElementById('sidebar-slot').innerHTML = data;
                 })
                 .catch(error => console.error('Error loading sidebar:', error));
+
+            // Fetch and insert header
+            fetch('index-header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-slot').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading header:', error));
 
             // Fetch and insert footer, then execute counter logic
             fetch('index-footer.html')
