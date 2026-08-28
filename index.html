@@ -49,7 +49,7 @@
             font-size: 16px;
             line-height: 1.5;
         }
-        #footer-slot {
+        #footer {
             width: 100%;
             background: #121212;
         }
@@ -87,7 +87,7 @@
     </div>
 
     <!-- Footer Slot -->
-    <div id="footer-slot"></div>
+    <div id="footer"></div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -107,19 +107,27 @@
                 })
                 .catch(error => console.error('Error loading sidebar:', error));
 
-            // Fetch and insert footer
+            // Fetch and insert footer, then execute counter logic
             fetch('index-footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer-slot').innerHTML = data;
-                    const scripts = document.getElementById('footer-slot').querySelectorAll('script');
-                    scripts.forEach(script => {
-                        const newScript = document.createElement('script');
-                        newScript.text = script.innerHTML;
-                        document.body.appendChild(newScript);
-                    });
+                .then(r => r.text())
+                .then(html => {
+                    document.getElementById('footer').innerHTML = html;
+
+                    // NOW the footer exists — safe to run the counter
+                    const domain = window.location.hostname.replace(/\./g, "_");
+                    const page = window.location.pathname.replace(/\//g, "_") || "home";
+                    const counterKey = "pv_" + domain + "_" + page;
+
+                    let views = localStorage.getItem(counterKey);
+                    views = views ? parseInt(views) + 1 : 1;
+                    localStorage.setItem(counterKey, views);
+
+                    const counterEl = document.getElementById("viewCounter");
+                    if (counterEl) {
+                        counterEl.innerText = "Views: " + views;
+                    }
                 })
-                .catch(error => console.error('Error loading footer:', error));
+                .catch(err => console.error("Footer failed to load:", err));
         });
     </script>
 </body>
