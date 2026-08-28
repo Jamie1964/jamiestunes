@@ -143,12 +143,10 @@ li {
                 <iframe src="https://www.youtube.com/embed/JGwWNGJdvx8" title="Ed Sheeran - Acoustic Performance" allowfullscreen></iframe>
             </div>
 
-            <div class="last-updated">Last Updated: August 28, 2026 — 10:29 AM MDT</div>
+            <div class="last-updated">Last Updated: August 28, 2026 — 10:32 AM MDT</div>
         </main>
 
-        <footer id="footer-container">
-            <p>&copy; 2026 jamiestunes.com &bull; Page Visits: <span id="visit-counter">1000</span></p>
-        </footer>
+        <footer id="footer"></footer>
     </div>
 </div>
 
@@ -164,28 +162,24 @@ li {
         .catch(() => {});
 
     fetch('/concerts/concerts-footer.html')
-        .then(response => response.text())
-        .then(data => {
-            if (data.trim()) {
-                document.getElementById('footer-container').innerHTML = data;
-            }
-            const counter = document.getElementById('visit-counter');
-            if (counter) {
-                let count = localStorage.getItem('jamiestunes_visits') || 1000;
-                count = parseInt(count) + 1;
-                localStorage.setItem('jamiestunes_visits', count);
-                counter.innerText = count.toLocaleString();
+        .then(r => r.text())
+        .then(html => {
+            document.getElementById('footer').innerHTML = html;
+
+            const domain = window.location.hostname.replace(/\./g, "_");
+            const page = window.location.pathname.replace(/\//g, "_") || "home";
+            const counterKey = "pv_" + domain + "_" + page;
+
+            let views = localStorage.getItem(counterKey);
+            views = views ? parseInt(views) + 1 : 1;
+            localStorage.setItem(counterKey, views);
+
+            const counterEl = document.getElementById("viewCounter");
+            if (counterEl) {
+                counterEl.innerText = "Views: " + views;
             }
         })
-        .catch(() => {
-            const counter = document.getElementById('visit-counter');
-            if (counter) {
-                let count = localStorage.getItem('jamiestunes_visits') || 1000;
-                count = parseInt(count) + 1;
-                localStorage.setItem('jamiestunes_visits', count);
-                counter.innerText = count.toLocaleString();
-            }
-        });
+        .catch(err => console.error("Footer failed to load:", err));
 </script>
 
 </body>
