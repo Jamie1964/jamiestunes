@@ -18,7 +18,7 @@ The Concert Room
 </h1>
 
 <p style="font-size:20px;max-width:700px;margin:20px auto;line-height:1.6;text-align:center;">
-Welcome to <strong>The Concert Room</strong> - your archive of full-length classic concerts. More shows will be added soon!
+Welcome to [The Concert Room](https://github.com/Jamie1964/jamiestunes/blob/main/concerts/index.html) - your archive of full-length classic concerts. More shows will be added soon!
 </p>
 
 <div style="margin-top:40px;text-align:center;">
@@ -57,10 +57,14 @@ Welcome to <strong>The Concert Room</strong> - your archive of full-length class
   <a href="travis-tritt-live-and-kickin.html" style="display:block;color:#ffd700;font-size:24px;margin:15px 0;text-decoration:none;">Travis Tritt</a>
 </div>
 
+<p style="margin-top:40px;font-size:14px;color:#888888;text-align:center;">
+Last Updated: August 28, 2026 — 11:04 AM MDT
+</p>
+
 </main>
 </div>
 
-<div id="concertFooter"></div>
+<div id="footer"></div>
 
 <script>
 fetch('concerts-sidebar.html')
@@ -72,8 +76,24 @@ fetch('../header.html')
   .then(data => { document.getElementById('concertHeader').innerHTML = data; });
 
 fetch('../footer.html')
-  .then(res => res.text())
-  .then(data => { document.getElementById('concertFooter').innerHTML = data; });
+  .then(r => r.text())
+  .then(html => {
+    document.getElementById('footer').innerHTML = html;
+
+    const domain = window.location.hostname.replace(/\./g, "_");
+    const page = window.location.pathname.replace(/\//g, "_") || "home";
+    const counterKey = "pv_" + domain + "_" + page;
+
+    let views = localStorage.getItem(counterKey);
+    views = views ? parseInt(views) + 1 : 1;
+    localStorage.setItem(counterKey, views);
+
+    const counterEl = document.getElementById("viewCounter");
+    if (counterEl) {
+      counterEl.innerText = "Views: " + views;
+    }
+  })
+  .catch(err => console.error("Footer failed to load:", err));
 </script>
 
 </body>
