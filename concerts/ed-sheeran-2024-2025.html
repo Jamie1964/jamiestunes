@@ -1,0 +1,142 @@
+<!-- https://jamiestunes.com/concerts/ed-sheeran-2024-2025.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ed-sheeran-2024-2025.html (2024–2025) – Featured Concert & Performances – Full HD</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+sidebar {
+    width: 250px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #333;
+}
+main {
+    flex: 1;
+    padding: 40px;
+    box-sizing: border-box;
+    max-width: 900px;
+}
+h1, h2 {
+    color: #ffffff;
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.details-box, .trivia-box {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 1px solid #333;
+}
+ul {
+    padding-left: 20px;
+}
+li {
+    margin-bottom: 8px;
+}
+</style>
+</head>
+<body>
+
+<div id="header-container"></div>
+
+<div class="container">
+    <sidebar id="sidebar-container"></sidebar>
+    <main>
+        <h1>Ed Sheeran – Live Acoustic Sessions & Loop Pedal Masterclass</h1>
+
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/zxB275r3_gQ" title="Ed Sheeran - Live Performance" allowfullscreen></iframe>
+        </div>
+
+        <div class="details-box">
+            <h2>Concert Details</h2>
+            <p><strong>Artist:</strong> Ed Sheeran</p>
+            <p><strong>Concert Name:</strong> Ed Sheeran - Live Acoustic Sessions & Loop Pedal Masterclass</p>
+            <p><strong>Year:</strong> 2024–2025</p>
+            <p><strong>Venue:</strong> Stadium Tours & Intimate Studio Sessions</p>
+            <p><strong>Date:</strong> Multiple appearances</p>
+        </div>
+
+        <div class="details-box">
+            <h2>Background & Performance Notes</h2>
+            <p>Ed Sheeran redefined modern solo performance by commanding massive stadium stages armed with just an acoustic guitar and a loop pedal. His ability to layer rhythm, vocal harmonies, and intricate guitar picking live in real time showcases exceptional musicianship and raw performance energy.</p>
+            <p>This concert collection highlights his most captivating live sets, capturing the dynamic range between stripped-back emotional ballads and high-energy anthems.</p>
+        </div>
+
+        <div class="details-box">
+            <h2>Artistic Style & Influence</h2>
+            <p>Sheeran’s style bridges acoustic folk, pop melody, and hip-hop rhythmic phrasing. His performances emphasize organic instrumentation, loop architecture, and direct audience connection without relying on backing tracks.</p>
+        </div>
+
+        <div class="trivia-box">
+            <h2>Fun Facts & Trivia</h2>
+            <ul>
+                <li>Pioneered stadium-scale looping performances using custom-built pedal setups.</li>
+                <li>Known for marathon world tours breaking historical attendance and revenue records.</li>
+                <li>Seamlessly blends vocal percussion, beatboxing, and layered harmonies into single-take performances.</li>
+                <li>Maintains an intimate campfire-style vibe even when performing inside sold-out 90,000-seat stadiums.</li>
+            </ul>
+        </div>
+
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/JGwWNGJdvx8" title="Ed Sheeran - Acoustic Performance" allowfullscreen></iframe>
+        </div>
+    </main>
+</div>
+
+<div id="footer-container"></div>
+
+<script>
+    fetch('/components/header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header-container').innerHTML = data);
+
+    fetch('/components/sidebar-edsheeran.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('sidebar-container').innerHTML = data);
+
+    fetch('/components/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+            const counter = document.getElementById('visit-counter');
+            if (counter) {
+                let count = localStorage.getItem('jamiestunes_visits') || 1000;
+                count = parseInt(count) + 1;
+                localStorage.setItem('jamiestunes_visits', count);
+                counter.innerText = count.toLocaleString();
+            }
+        });
+</script>
+
+</body>
+</html>
