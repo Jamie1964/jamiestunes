@@ -2,128 +2,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>jamiestunes.com - The Graystones</title>
-    <style>
-        body {
-            margin: 0;
-            background: #121212;
-            color: #fff;
-            font-family: sans-serif;
-            display: flex;
-            min-height: 100vh;
-        }
-        #sidebar-slot {
-            flex-shrink: 0;
-            background: #121212;
-            display: flex;
-        }
-        .main-wrapper {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            background: #121212;
-        }
-        #header-slot {
-            width: 100%;
-            background: #121212;
-        }
-        .content-area {
-            flex-grow: 1;
-            padding: 40px;
-            background: #121212;
-            text-align: center;
-        }
-        .content-area h1 {
-            color: #1e90ff;
-        }
-        .section-block {
-            margin: 30px auto;
-            max-width: 600px;
-        }
-        .section-block h2 a {
-            color: gold;
-            text-decoration: none;
-        }
-        .section-block h2 a:hover {
-            text-decoration: underline;
-        }
-        .section-block p {
-            color: #ccc;
-            font-size: 16px;
-            line-height: 1.5;
-        }
-        #footer {
-            width: 100%;
-            background: #121212;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>jamiestunes.com - The Graystones</title>
+<style>
+body {margin: 0; background: #121212; color: #fff; font-family: sans-serif; display: flex; min-height: 100vh; }
+#sidebar-slot {flex-shrink: 0; background: #121212; display: flex; }
+.main-wrapper {display: flex; flex-direction: column; flex-grow: 1; background: #121212; }
+#header-slot {width: 100%; background: #121212; }
+.content-area {flex-grow: 1; padding: 40px; background: #121212; text-align: center; }
+.content-area h1 {color: #1e90ff; }
+.section-block {margin: 30px auto; max-width: 600px; }
+.section-block h2 a {color: gold; text-decoration: none; }
+.section-block h2 a:hover {text-decoration: underline; }
+.section-block p {color: #ccc; font-size: 16px; line-height: 1.5; }
+.video-container {position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin-top: 15px; border-radius: 8px; }
+.video-container iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+#footer {width: 100%; background: #121212; }
+</style>
 </head>
 <body>
 
-    <!-- Sidebar Slot -->
-    <div id="sidebar-slot"></div>
+<!-- Sidebar Slot -->
+<div id="sidebar-slot"></div>
 
-    <!-- Main Wrapper holding Header, Content, and Footer -->
-    <div class="main-wrapper">
-        <!-- Header Slot -->
-        <div id="header-slot"></div>
+<!-- Main Wrapper holding Header, Content, and Footer -->
+<div class="main-wrapper">
 
-        <!-- Main Content Area -->
-        <div class="content-area">
-            <img src="../images/children-logo.jpg" alt="Children Artists" style="width: 640px; max-width: 100%; height: auto; margin-bottom: 30px;">
-            <h1>The Graystones</h1>
+<!-- Header Slot -->
+<div id="header-slot"></div>
+
+<!-- Main Content Area -->
+<div class="content-area">
+<img src="../images/children-logo.jpg" alt="Children Artists" style="width: 640px; max-width: 100%; height: auto; margin-bottom: 30px;">
+<h1>The Graystones</h1>
+
 <p style="font-size: 18px; color: #aaa; line-height: 1.6; margin-bottom: 40px;">The Graystones are an exceptionally talented group of young musicians celebrated for their remarkable instrumentation, tight vocal arrangements, and captivating interpretations of classic rock and pop anthems. Bringing together raw youthful energy with a deep passion for live performance, the group has built an inspiring musical profile through their dynamic covers and dedication to the art of performance. Whether delivering intricate guitar arrangements or shared vocal harmonies, The Graystones continue to charm audiences and stand out as a uniquely gifted young ensemble.</p>
-            <div class="section-block">
-                <h2>Coming Soon</h2>
-                <p>We are currently building out our collection of children's musical performances and artist archives. Check back soon!</p>
-            </div>
-        </div>
 
-        <!-- Footer Slot -->
-        <div id="footer"></div>
-    </div>
+<!-- Video Section: Part 1 -->
+<div class="section-block">
+<h2><a href="https://www.youtube.com/watch?v=6ufnaggeLJA" target="_blank">The Graystones - Live Performance: First Set (Part 1)</a></h2>
+<p>Experience the opening set of this incredible live performance. Recorded live on October 11, 2025, the band showcases an amazing lineup of covers including Billy Joel's "This Is My Life", the Eagles' "I Can't Tell You Why", Fleetwood Mac's "Landslide" and "Dreams", Teddy Swims' "The Door", Billy Joel's "Vienna", and Postmodern Jukebox's vintage arrangement of Radiohead's "Creep".</p>
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6ufnaggeLJA?si=S192bTGMWmtRF4wG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Fetch and insert sidebar
-            fetch('children-sidebar.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('sidebar-slot').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading sidebar:', error));
+<!-- Video Section: Part 2 (Coming Soon) -->
+<div class="section-block">
+<h2>Live Performance (Part 2)</h2>
+<p>Coming soon! The second segment of this live performance series will be added shortly.</p>
+</div>
 
-            // Fetch and insert header
-            fetch('children-header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header-slot').innerHTML = data;
-                })
-                .catch(error => console.error('Error loading header:', error));
+<!-- Video Section: Part 3 (Coming Soon) -->
+<div class="section-block">
+<h2>Live Performance (Part 3)</h2>
+<p>Coming soon! The final segment of this live performance series will be added shortly.</p>
+</div>
 
-            // Fetch and insert footer, then execute counter logic
-            fetch('children-footer.html')
-                .then(r => r.text())
-                .then(html => {
-                    document.getElementById('footer').innerHTML = html;
+</div>
 
-                    // NOW the footer exists — safe to run the counter
-                    const domain = window.location.hostname.replace(/\./g, "_");
-                    const page = window.location.pathname.replace(/\//g, "_") || "home";
-                    const counterKey = "pv_" + domain + "_" + page;
+<!-- Footer Slot -->
+<div id="footer"></div>
 
-                    let views = localStorage.getItem(counterKey);
-                    views = views ? parseInt(views) + 1 : 1;
-                    localStorage.setItem(counterKey, views);
+</div>
 
-                    const counterEl = document.getElementById("viewCounter");
-                    if (counterEl) {
-                        counterEl.innerText = "Views: " + views;
-                    }
-                })
-                .catch(err => console.error("Footer failed to load:", err));
-        });
-    </script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+// Fetch and insert sidebar
+fetch('children-sidebar.html')
+.then(response => response.text())
+.then(data => {document.getElementById('sidebar-slot').innerHTML = data;})
+.catch(error => console.error('Error loading sidebar:', error));
+
+// Fetch and insert header
+fetch('children-header.html')
+.then(response => response.text())
+.then(data => {document.getElementById('header-slot').innerHTML = data;})
+.catch(error => console.error('Error loading header:', error));
+
+// Fetch and insert footer, then execute counter logic
+fetch('children-footer.html')
+.then(r => r.text())
+.then(html => {
+document.getElementById('footer').innerHTML = html;
+const domain = window.location.hostname.replace(/\./g, "_");
+const page = window.location.pathname.replace(/\//g, "_") || "home";
+const counterKey = "pv_" + domain + "_" + page;
+let views = localStorage.getItem(counterKey);
+views = views ? parseInt(views) + 1 : 1;
+localStorage.setItem(counterKey, views);
+const counterEl = document.getElementById("viewCounter");
+if (counterEl) {
+counterEl.innerText = "Views: " + views;
+}
+})
+.catch(err => console.error("Footer failed to load:", err));
+});
+</script>
+
 </body>
 </html>
