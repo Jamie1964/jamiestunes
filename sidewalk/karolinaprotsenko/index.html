@@ -1,1 +1,108 @@
 
+<!-- https://jamiestunes.com/sidewalk/karolinaprotsenko/index.html -->
+<!-- August 28, 2026 — 5:58 PM MDT -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Explore the musical journey, live violin performances, and videos of talented violin prodigy Karolina Protsenko on Jamie's Tunes.">
+<meta name="keywords" content="Karolina Protsenko, violin prodigy, street performance, live violin, Jamie's Tunes, acoustic covers, violinist">
+<meta name="author" content="Jamie's Tunes">
+<title>Karolina Protsenko - Biography, Live Videos &amp; Music | jamiestunes.com</title>
+<style>
+body {margin: 0; background: #121212; color: #fff; font-family: sans-serif; display: flex; min-height: 100vh; }
+#sidebar-slot {flex-shrink: 0; background: #121212; display: flex; }
+.main-wrapper {display: flex; flex-direction: column; flex-grow: 1; background: #121212; }
+#header-slot {width: 100%; background: #121212; }
+.content-area {flex-grow: 1; padding: 40px; background: #121212; text-align: center; }
+.content-area h1 {color: #1e90ff; font-size: 36px; margin-bottom: 20px; }
+.artist-section {margin: 40px auto; max-width: 600px; }
+.artist-section img {width: 640px; max-width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto 15px auto; }
+.artist-section h2 {color: gold; font-size: 28px; margin: 0; }
+.bio-section {max-width: 800px; margin: 40px auto; text-align: left; background: #1a1a1a; padding: 30px; border-radius: 8px; border: 1px solid #333; }
+.bio-section h3 {color: #1e90ff; font-size: 24px; margin-top: 0; text-align: center; }
+.bio-section p {font-size: 16px; color: #ccc; line-height: 1.8; margin-bottom: 20px; }
+.bio-section a {color: #1e90ff; text-decoration: none; }
+.bio-section a:hover {text-decoration: underline; }
+.video-container {position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 15px auto 0 auto; border-radius: 8px; }
+.video-container iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+#footer {width: 100%; background: #121212; }
+</style>
+</head>
+<body>
+
+<!-- Sidebar Slot -->
+<div id="sidebar-slot"></div>
+
+<!-- Main Wrapper holding Header, Content, and Footer -->
+<div class="main-wrapper">
+
+<!-- Header Slot -->
+<div id="header-slot"></div>
+
+<!-- Main Content Area -->
+<div class="content-area">
+<h1>Karolina Protsenko</h1>
+
+<div class="artist-section">
+<img src="https://jamiestunes.com/images/karolina-banner.jpg" alt="Karolina Protsenko - Violinist">
+<h2>Karolina Protsenko</h2>
+
+<hr style="border: 0; border-top: 1px solid #333; margin: 30px auto; max-width: 400px;">
+
+<!-- Add initial content or videos here -->
+</div>
+
+<!-- Comprehensive Bio / SEO Content Section -->
+<div class="bio-section">
+<h3>About Karolina Protsenko</h3>
+<p><strong>Karolina Protsenko</strong> is a sensational young violinist and musical prodigy who has captivated millions of listeners worldwide through her breathtaking public street performances and acoustic cover arrangements. Known for her expressive technique, joyful stage presence, and ability to connect deeply with crowds, Karolina has transformed outdoor spaces into vibrant concert venues.</p>
+<p>Rising to international prominence through her viral online videos and dedicated digital community, she performs a diverse repertoire spanning popular contemporary hits, timeless classics, rock anthems, and cinematic themes. Her uplifting musical interpretations continue to inspire aspiring musicians and music lovers across the globe.</p>
+
+<p style="text-align: center; margin-top: 25px;"><a href="https://www.youtube.com/@KarolinaProtsenko" target="_blank" rel="noopener">Karolina Protsenko on youtube</a></p>
+</div>
+
+</div>
+
+<!-- Footer Slot -->
+<div id="footer"></div>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+// Fetch and insert sidebar
+fetch('../sidewalk-sidebar.html')
+.then(response => response.text())
+.then(data => {document.getElementById('sidebar-slot').innerHTML = data;})
+.catch(error => console.error('Error loading sidebar:', error));
+
+// Fetch and insert header
+fetch('../sidewalk-header.html')
+.then(response => response.text())
+.then(data => {document.getElementById('header-slot').innerHTML = data;})
+.catch(error => console.error('Error loading header:', error));
+
+// Fetch and insert footer, then execute counter logic
+fetch('../sidewalk-footer.html')
+.then(r => r.text())
+.then(html => {
+document.getElementById('footer').innerHTML = html;
+
+// NOW the footer exists — safe to run the counter
+const domain = window.location.hostname.replace(/\./g, "_");
+const page = window.location.pathname.replace(/\//g, "_") || "home";
+const counterKey = "pv_" + domain + "_" + page;
+
+let views = localStorage.getItem(counterKey);
+views = views ? parseInt(views) + 1 : 1;
+localStorage.setItem(counterKey, views);
+
+document.getElementById("viewCounter").innerText = "Views: " + views;
+})
+.catch(err => console.error("Footer failed to load:", err));
+});
+</script>
+
+</body>
+</html>
