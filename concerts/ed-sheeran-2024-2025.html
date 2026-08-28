@@ -13,9 +13,18 @@ body {
     margin: 0;
     padding: 0;
 }
-.container {
+.page-layout {
     display: flex;
+    flex-direction: column;
     min-height: 100vh;
+}
+header {
+    background-color: #1a1a1a;
+    width: 100%;
+}
+.body-container {
+    display: flex;
+    flex: 1;
     align-items: flex-start;
 }
 aside {
@@ -24,6 +33,7 @@ aside {
     padding: 20px;
     box-sizing: border-box;
     flex-shrink: 0;
+    min-height: calc(100vh - 60px);
 }
 main {
     flex: 1;
@@ -31,15 +41,13 @@ main {
     box-sizing: border-box;
     max-width: 900px;
 }
-header {
-    background-color: #1a1a1a;
-}
 footer {
     background-color: #1a1a1a;
     text-align: center;
     padding: 20px;
     font-size: 14px;
     color: #888;
+    width: 100%;
 }
 h1, h2 {
     color: #ffffff;
@@ -81,66 +89,69 @@ li {
 </head>
 <body>
 
-<header id="header-container">
-    <div style="padding: 15px 30px; font-weight: bold; font-size: 18px; color: #fff;">Jamie's Tunes</div>
-</header>
+<div class="page-layout">
+    <header id="header-container">
+        <div style="padding: 15px 30px; font-weight: bold; font-size: 18px; color: #fff;">Jamie's Tunes</div>
+    </header>
 
-<div class="container">
-    <aside id="sidebar-container">
-        <h3>Concerts</h3>
-        <ul style="list-style-type: none; padding: 0;">
-            <li style="margin-bottom: 10px;"><a href="/concerts/index.html" style="color: #4da6ff; text-decoration: none;">Concerts Home</a></li>
-            <li style="margin-bottom: 10px;"><a href="/concerts/ed-sheeran-2024-2025.html" style="color: #4da6ff; text-decoration: none;">Ed Sheeran (2024–2025)</a></li>
-        </ul>
-    </aside>
-    <main>
-        <h1>Ed Sheeran – Live Acoustic Sessions & Loop Pedal Masterclass</h1>
-
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/zxB275r3_gQ" title="Ed Sheeran - Live Performance" allowfullscreen></iframe>
-        </div>
-
-        <div class="details-box">
-            <h2>Concert Details</h2>
-            <p><strong>Artist:</strong> Ed Sheeran</p>
-            <p><strong>Concert Name:</strong> Ed Sheeran - Live Acoustic Sessions & Loop Pedal Masterclass</p>
-            <p><strong>Year:</strong> 2024–2025</p>
-            <p><strong>Venue:</strong> Stadium Tours & Intimate Studio Sessions</p>
-            <p><strong>Date:</strong> Multiple appearances</p>
-        </div>
-
-        <div class="details-box">
-            <h2>Background & Performance Notes</h2>
-            <p>Ed Sheeran redefined modern solo performance by commanding massive stadium stages armed with just an acoustic guitar and a loop pedal. His ability to layer rhythm, vocal harmonies, and intricate guitar picking live in real time showcases exceptional musicianship and raw performance energy.</p>
-            <p>This concert collection highlights his most captivating live sets, capturing the dynamic range between stripped-back emotional ballads and high-energy anthems.</p>
-        </div>
-
-        <div class="details-box">
-            <h2>Artistic Style & Influence</h2>
-            <p>Sheeran’s style bridges acoustic folk, pop melody, and hip-hop rhythmic phrasing. His performances emphasize organic instrumentation, loop architecture, and direct audience connection without relying on backing tracks.</p>
-        </div>
-
-        <div class="trivia-box">
-            <h2>Fun Facts & Trivia</h2>
-            <ul>
-                <li>Pioneered stadium-scale looping performances using custom-built pedal setups.</li>
-                <li>Known for marathon world tours breaking historical attendance and revenue records.</li>
-                <li>Seamlessly blends vocal percussion, beatboxing, and layered harmonies into single-take performances.</li>
-                <li>Maintains an intimate campfire-style vibe even when performing inside sold-out 90,000-seat stadiums.</li>
+    <div class="body-container">
+        <aside id="sidebar-container">
+            <h3>Concerts</h3>
+            <ul style="list-style-type: none; padding: 0;">
+                <li style="margin-bottom: 10px;"><a href="/concerts/index.html" style="color: #4da6ff; text-decoration: none;">Concerts Home</a></li>
+                <li style="margin-bottom: 10px;"><a href="/concerts/ed-sheeran-2024-2025.html" style="color: #4da6ff; text-decoration: none;">Ed Sheeran (2024–2025)</a></li>
             </ul>
-        </div>
+        </aside>
+        
+        <main>
+            <h1>Ed Sheeran – Live Acoustic Sessions & Loop Pedal Masterclass</h1>
 
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/JGwWNGJdvx8" title="Ed Sheeran - Acoustic Performance" allowfullscreen></iframe>
-        </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/zxB275r3_gQ" title="Ed Sheeran - Live Performance" allowfullscreen></iframe>
+            </div>
 
-        <div class="last-updated">Last Updated: August 28, 2026 — 10:20 AM MDT</div>
-    </main>
+            <div class="details-box">
+                <h2>Concert Details</h2>
+                <p><strong>Artist:</strong> Ed Sheeran</p>
+                <p><strong>Concert Name:</strong> Ed Sheeran - Live Acoustic Sessions & Loop Pedal Masterclass</p>
+                <p><strong>Year:</strong> 2024–2025</p>
+                <p><strong>Venue:</strong> Stadium Tours & Intimate Studio Sessions</p>
+                <p><strong>Date:</strong> Multiple appearances</p>
+            </div>
+
+            <div class="details-box">
+                <h2>Background & Performance Notes</h2>
+                <p>Ed Sheeran redefined modern solo performance by commanding massive stadium stages armed with just an acoustic guitar and a loop pedal. His ability to layer rhythm, vocal harmonies, and intricate guitar picking live in real time showcases exceptional musicianship and raw performance energy.</p>
+                <p>This concert collection highlights his most captivating live sets, capturing the dynamic range between stripped-back emotional ballads and high-energy anthems.</p>
+            </div>
+
+            <div class="details-box">
+                <h2>Artistic Style & Influence</h2>
+                <p>Sheeran’s style bridges acoustic folk, pop melody, and hip-hop rhythmic phrasing. His performances emphasize organic instrumentation, loop architecture, and direct audience connection without relying on backing tracks.</p>
+            </div>
+
+            <div class="trivia-box">
+                <h2>Fun Facts & Trivia</h2>
+                <ul>
+                    <li>Pioneered stadium-scale looping performances using custom-built pedal setups.</li>
+                    <li>Known for marathon world tours breaking historical attendance and revenue records.</li>
+                    <li>Seamlessly blends vocal percussion, beatboxing, and layered harmonies into single-take performances.</li>
+                    <li>Maintains an intimate campfire-style vibe even when performing inside sold-out 90,000-seat stadiums.</li>
+                </ul>
+            </div>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/JGwWNGJdvx8" title="Ed Sheeran - Acoustic Performance" allowfullscreen></iframe>
+            </div>
+
+            <div class="last-updated">Last Updated: August 28, 2026 — 10:20 AM MDT</div>
+        </main>
+    </div>
+
+    <footer id="footer-container">
+        <p>&copy; 2026 jamiestunes.com &bull; Page Visits: <span id="visit-counter">1000</span></p>
+    </footer>
 </div>
-
-<footer id="footer-container">
-    <p>&copy; 2026 jamiestunes.com &bull; Page Visits: <span id="visit-counter">1000</span></p>
-</footer>
 
 <script>
     fetch('/concerts/concerts-header.html')
