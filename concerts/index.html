@@ -18,7 +18,7 @@ The Concert Room
 </h1>
 
 <p style="font-size:20px;max-width:700px;margin:20px auto;line-height:1.6;text-align:center;">
-Welcome to [The Concert Room](https://github.com/Jamie1964/jamiestunes/blob/main/concerts/index.html) - your archive of full-length classic concerts. More shows will be added soon!
+Welcome to <a href="https://github.com/Jamie1964/jamiestunes/blob/main/concerts/index.html" style="color:#ffd700;text-decoration:none;">The Concert Room</a> - your archive of full-length classic concerts. More shows will be added soon!
 </p>
 
 <div style="margin-top:40px;text-align:center;">
@@ -58,7 +58,7 @@ Welcome to [The Concert Room](https://github.com/Jamie1964/jamiestunes/blob/main
 </div>
 
 <p style="margin-top:40px;font-size:14px;color:#888888;text-align:center;">
-Last Updated: August 28, 2026 — 11:04 AM MDT
+Last Updated: August 28, 2026 — 11:06 AM MDT
 </p>
 
 </main>
@@ -67,33 +67,36 @@ Last Updated: August 28, 2026 — 11:04 AM MDT
 <div id="footer"></div>
 
 <script>
-fetch('concerts-sidebar.html')
-  .then(res => res.text())
-  .then(data => { document.getElementById('concertSidebar').innerHTML = data; });
+  fetch('concerts-sidebar.html')
+    .then(res => res.text())
+    .then(data => { document.getElementById('concertSidebar').innerHTML = data; })
+    .catch(err => console.error("Sidebar failed to load:", err));
 
-fetch('../header.html')
-  .then(res => res.text())
-  .then(data => { document.getElementById('concertHeader').innerHTML = data; });
+  fetch('../header.html')
+    .then(res => res.text())
+    .then(data => { document.getElementById('concertHeader').innerHTML = data; })
+    .catch(err => console.error("Header failed to load:", err));
 
-fetch('../footer.html')
-  .then(r => r.text())
-  .then(html => {
-    document.getElementById('footer').innerHTML = html;
+  fetch('../footer.html')
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById('footer').innerHTML = html;
 
-    const domain = window.location.hostname.replace(/\./g, "_");
-    const page = window.location.pathname.replace(/\//g, "_") || "home";
-    const counterKey = "pv_" + domain + "_" + page;
+      // NOW the footer exists — safe to run the counter
+      const domain = window.location.hostname.replace(/\./g, "_");
+      const page = window.location.pathname.replace(/\//g, "_") || "home";
+      const counterKey = "pv_" + domain + "_" + page;
 
-    let views = localStorage.getItem(counterKey);
-    views = views ? parseInt(views) + 1 : 1;
-    localStorage.setItem(counterKey, views);
+      let views = localStorage.getItem(counterKey);
+      views = views ? parseInt(views) + 1 : 1;
+      localStorage.setItem(counterKey, views);
 
-    const counterEl = document.getElementById("viewCounter");
-    if (counterEl) {
-      counterEl.innerText = "Views: " + views;
-    }
-  })
-  .catch(err => console.error("Footer failed to load:", err));
+      const counterEl = document.getElementById("viewCounter");
+      if (counterEl) {
+        counterEl.innerText = "Views: " + views;
+      }
+    })
+    .catch(err => console.error("Footer failed to load:", err));
 </script>
 
 </body>
