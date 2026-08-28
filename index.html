@@ -1,8 +1,72 @@
-<!-- FILENAME: music/index.html -->
+<!-- https://jamiestunes.com/index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta http-equiv="refresh" content="0; url=concerts/index.html">
+    <meta charset="UTF-8">
+    <title>jamiestunes.com - Home</title>
+    <style>
+        body {
+            margin: 0;
+            background: #121212;
+            color: #fff;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .main-layout {
+            display: flex;
+            flex: 1;
+        }
+        #sidebar-slot {
+            flex-shrink: 0;
+        }
+        .content-area {
+            flex-grow: 1;
+            padding: 40px;
+        }
+    </style>
 </head>
-<body></body>
+<body>
+
+    <div class="main-layout">
+        <!-- Sidebar Slot -->
+        <div id="sidebar-slot"></div>
+
+        <!-- Main Content Area -->
+        <div class="content-area">
+            <h1>Welcome to jamiestunes.com</h1>
+            <p>Explore live concert video archives and musical performances.</p>
+        </div>
+    </div>
+
+    <!-- Footer Slot -->
+    <div id="footer-slot"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Fetch and insert sidebar
+            fetch('index-sidebar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('sidebar-slot').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading sidebar:', error));
+
+            // Fetch and insert footer
+            fetch('index-footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-slot').innerHTML = data;
+                    const scripts = document.getElementById('footer-slot').querySelectorAll('script');
+                    scripts.forEach(script => {
+                        const newScript = document.createElement('script');
+                        newScript.text = script.innerHTML;
+                        document.body.appendChild(newScript);
+                    });
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        });
+    </script>
+</body>
 </html>
