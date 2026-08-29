@@ -29,16 +29,18 @@ aside {
     flex: 1;
     display: flex;
     flex-direction: column;
+    min-width: 0; /* Prevents flex items from overflowing */
+}
+header {
+    background-color: #1a1a1a;
+    width: 100%;
+    box-sizing: border-box;
 }
 main {
     flex: 1;
     padding: 40px;
     box-sizing: border-box;
     max-width: 900px;
-}
-header {
-    background-color: #1a1a1a;
-    width: 100%;
 }
 footer {
     background-color: #1a1a1a;
@@ -47,6 +49,7 @@ footer {
     font-size: 14px;
     color: #888;
     width: 100%;
+    box-sizing: border-box;
 }
 h1, h2 {
     color: #ffffff;
@@ -143,7 +146,7 @@ li {
                 <iframe src="https://www.youtube.com/embed/JGwWNGJdvx8" title="Ed Sheeran - Acoustic Performance" allowfullscreen></iframe>
             </div>
 
-            <!-- LAST UPDATED (Inside Main Content Flow) -->
+            <!-- LAST UPDATED -->
             <div style="text-align: center; margin-top: 40px; margin-bottom: 20px; color: #777; font-size: 13px;">
                 Last Updated: August 29, 2026 — 6:40 AM MDT
             </div>
