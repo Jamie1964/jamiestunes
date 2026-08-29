@@ -1,46 +1,43 @@
-<!-- https://jamiestunes.com/concerts/index.html -->
-<!-- August 28, 2026 — 8:45 PM MDT -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jamiestunes - The Concert Room</title>
-</head>
-<body style="margin: 0; background: #121212; color: #ffffff; font-family: sans-serif;">
-
-    <!-- Parent Flexbox wrapper forcing side-by-side layout -->
-    <div style="display: flex; min-height: 100vh; width: 100%;">
-        
-        <!-- Sidebar container loaded dynamically via fetch -->
-        <div id="sidebar-container"></div>
-
-        <!-- Main content area expanding to fill remaining width -->
-        <main style="flex: 1; padding: 40px; box-sizing: border-box;">
-            <h1>The Concert Room</h1>
-            <p>Welcome to <strong>The Concert Room</strong> — your archive of full-length classic concerts. More shows will be added soon!</p>
-            
-            <!-- List of concerts -->
-            <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
-                <li><a href="40%20Fingers%20-%20A%20Guitar%20Night.html" style="color: #ffd700; text-decoration: none;">40 Fingers - A Guitar Night</a></li>
-                <li><a href="ABBA%20The%20Full%20Concert%20-A%20Tribute%20to%20ABBA-1%20MAY%202024%20Fort%20Lauderdale%20Florida%20Wells%20Hall%20at%20the%20Parker.html" style="color: #ffd700; text-decoration: none;">ABBA Tribute</a></li>
-                <li><a href="AC-DC%20-%20Live%20At%20River%20Plate%202009.html" style="color: #ffd700; text-decoration: none;">AC/DC - Live At River Plate 2009</a></li>
-                <li><a href="alan-jackson-last-call-one-for-the-road-final-concert-nashville-2026.html" style="color: #ffd700; text-decoration: none;">Alan Jackson - Last Call: One for the Road (Final Concert Nashville 2026)</a></li>
-                <li><a href="Amy%20Winehouse%20-%20Glastonbury%202008.html" style="color: #ffd700; text-decoration: none;">Amy Winehouse - Glastonbury 2008</a></li>
-                <li><a href="beegees-1997-lasvegas-onenightonly.html" style="color: #ffd700; text-decoration: none;">Bee Gees - One Night Only (Live in Las Vegas 1997)</a></li>
-            </ul>
-        </main>
-
-    </div>
-
-    <!-- Script to load the sidebar component -->
-    <script>
-        fetch('concerts-sidebar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('sidebar-container').innerHTML = data;
-            });
-    </script>
-
-</body>
-</html>
+<!-- https://jamiestunes.com/concerts/concerts-sidebar.html -->
+<!-- August 28, 2026 — 8:12 PM MDT -->
+<div style="width: 250px; background: #1a1a1a; padding: 20px; border-right: 1px solid #333; min-height: 100vh; height: auto; box-sizing: border-box; display: flex; flex-direction: column;">
+    <a href="https://jamiestunes.com/index.html" style="color: #1e90ff; text-decoration: none; font-size: 24px; font-weight: bold; text-align: center; margin-bottom: 20px; display: block;">jamiestunes</a>
+    <h2 style="color: #1e90ff; font-size: 20px; margin-top: 0; margin-bottom: 20px; text-align: center;">Navigation</h2>
+    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; flex-grow: 1;">
+        <li><a href="https://jamiestunes.com/children/index.html" style="color: #1e90ff; text-decoration: none; display: block; padding: 8px 12px; border-radius: 4px; transition: background 0.2s;">Children</a></li>
+        <li><a href="https://jamiestunes.com/concerts/index.html" style="color: #1e90ff; text-decoration: none; display: block; padding: 8px 12px; border-radius: 4px; transition: background 0.2s;">Concerts</a></li>
+        <li><a href="https://jamiestunes.com/sidewalk/index.html" style="color: #1e90ff; text-decoration: none; display: block; padding: 8px 12px; border-radius: 4px; transition: background 0.2s;">Sidewalk Artists</a></li>
+        <li style="margin-bottom:12px;"><a href="ABBA%20The%20Full%20Concert%20-A%20Tribute%20to%20ABBA-1%20MAY%202024%20Fort%20Lauderdale%20Florida%20Wells%20Hall%20at%20the%20Parker.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">ABBA Tribute</a></li>
+        <li style="margin-bottom:12px;"><a href="AC-DC%20-%20Live%20At%20River%20Plate%202009.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">AC/DC</a></li>
+        <li style="margin-bottom:12px;"><a href="alan-jackson-last-call-one-for-the-road-final-concert-nashville-2026.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Alan Jackson</a></li>
+        <li style="margin-bottom:12px;"><a href="Amy%20Winehouse%20-%20Glastonbury%202008.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Amy Winehouse</a></li>
+        <li style="margin-bottom:12px;"><a href="beegees-1997-lasvegas-onenightonly.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Bee Gees</a></li>
+        <li style="margin-bottom:12px;"><a href="brooks-dunn-austin-city-limits-2001.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Brooks & Dunn</a></li>
+        <li style="margin-bottom:12px;"><a href="Bruce%20Springsteen%20and%20The%20E%20Street%20Band%20Live%20in%20New%20York%20City.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Bruce Springsteen</a></li>
+        <li style="margin-bottom:12px;"><a href="chicago-live-at-tanglewood-1970.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Chicago (1970)</a></li>
+        <li style="margin-bottom:12px;"><a href="chicago-live-park-city-2024.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Chicago (2024)</a></li>
+        <li style="margin-bottom:12px;"><a href="daryl-hall-john-oates-ae-live-by-request-2003.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Daryl Hall & John Oates</a></li>
+        <li style="margin-bottom:12px;"><a href="Dire%20Straits%20-%20FULL%20CONCERT%20Rockpop%20In%20Concert%201980.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Dire Straits</a></li>
+        <li style="margin-bottom:12px;"><a href="dolly-parton-austin-city-limits-2022.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Dolly Parton</a></li>
+        <li style="margin-bottom:12px;"><a href="don-henley-live-inside-job-2000.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Don Henley</a></li>
+        <li style="margin-bottom:12px;"><a href="eagles-hell-freezes-over-1994.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Eagles</a></li>
+        <li style="margin-bottom:12px;"><a href="ed-sheeran-hurricane-festival-2024.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Ed Sheeran 2024</a></li>
+        <li style="margin-bottom:12px;"><a href="ed-sheeran-2024-2025.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Ed Sheeran Acoustic</a></li>
+        <li style="margin-bottom:12px;"><a href="elvis-cbs-tv-special-1977.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Elvis</a></li>
+        <li style="margin-bottom:12px;"><a href="fleetwood-mac-the-dance-full-concert-1997.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Fleetwood Mac</a></li>
+        <li style="margin-bottom:12px;"><a href="george-strait-live-2021.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">George Strait</a></li>
+        <li style="margin-bottom:12px;"><a href="jim-croce-live-in-concert.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Jim Croce</a></li>
+        <li style="margin-bottom:12px;"><a href="journey-live-in-houston-1981-hd-remaster.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Journey</a></li>
+        <li style="margin-bottom:12px;"><a href="Lanie%20Gardner%20-%20A%20Songwriter%E2%80%99s%20Diary,%20Bonfire%20Sessions.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Lanie Gardner</a></li>
+        <li style="margin-bottom:12px;"><a href="matchbox-twenty-itunes-festival-2012-full-concert.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Matchbox Twenty</a></li>
+        <li style="margin-bottom:12px;"><a href="mix-michael-jackson-live-at-wembley-july-16-1988.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Michael Jackson</a></li>
+        <li style="margin-bottom:12px;"><a href="morgan-wade-o2-kentish-town-2025.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Morgan Wade</a></li>
+        <li style="margin-bottom:12px;"><a href="waylon-jennings-willie-nelson-merle-haggard-johnny-cash-outlaw-country-playlist.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Outlaw Country</a></li>
+        <li style="margin-bottom:12px;"><a href="pink-floyd-pulse-live-at-earls-court-1994-full-concert-hd.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Pink Floyd</a></li>
+        <li style="margin-bottom:12px;"><a href="rod-stewart-avo-session-basel-2012.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Live in Basel</a></li>
+        <li style="margin-bottom:12px;"><a href="rush-madison-square-garden-2026.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Rush</a></li>
+        <li style="margin-bottom:12px;"><a href="simon-and-garfunkel-the-concert-in-central-park.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Simon & Garfunkel</a></li>
+        <li style="margin-bottom:12px;"><a href="the-highwaymen-live-authentic-outlaws.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">The Highwaymen</a></li>
+        <li style="margin-bottom:12px;"><a href="travis-tritt-live-and-kickin.html" style="color:#ffd700;text-decoration:none;font-size:14px;display:block;">Travis Tritt</a></li>
+    </ul>
+</div>
