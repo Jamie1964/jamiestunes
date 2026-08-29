@@ -1,0 +1,146 @@
+<!-- https://jamiestunes.com/children/raizedwrong.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- https://jamiestunes.com/children/raizedwrong.html -->
+    
+    <!-- PORTABLE SEO BLOCK -->
+    <title>Raized Wrong: Viral Family Band & Classic Rock Reimagined</title>
+    <meta name="description" content="Discover Raized Wrong, the sensational Southern California family band featuring young brothers Landon and Lyric Goldberg and their father Donny, bringing timeless classic rock and pop covers to a new generation.">
+    <meta name="keywords" content="Raized Wrong, Landon and Lyric Goldberg, Donny Goldberg, viral family band, classic rock covers, kids music archive">
+    
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Raized Wrong: Viral Family Band & Classic Rock Reimagined">
+    <meta property="og:description" content="Explore the musical journey of Raized Wrong, the viral family band keeping classic harmonies alive.">
+    <meta property="og:type" content="video.other">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Raized Wrong: Viral Family Band & Classic Rock Reimagined">
+    <meta name="twitter:description" content="Learn about Southern California viral sensation Raized Wrong.">
+    
+    <!-- PORTABLE JSON-LD STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
+        "name": "Raized Wrong",
+        "genre": "Classic Rock / Pop",
+        "description": "A viral Southern California family band made up of young brothers Landon and Lyric Goldberg and their father Donny, known for reimagining classic hits with incredible vocal harmonies."
+    }
+    </script>
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0d0d0d;
+            color: #fff;
+        }
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-left: 280px; /* space for sidebar */
+        }
+        .video-container {
+            text-align: center;
+            margin: 30px 0;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .video-embed {
+            width: 560px;
+            height: 315px;
+            border: 0;
+        }
+        .details-box {
+            background: #141414;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SIDEBAR LOADER -->
+    <div id="concertSidebar"></div>
+    <script>
+        fetch("children-sidebar.html")
+            .then(r => r.text())
+            .then(html => { document.getElementById('concertSidebar').innerHTML = html; });
+    </script>
+
+    <!-- HEADER LOADER -->
+    <div id="concertHeader"></div>
+    <script>
+        fetch("children-header.html")
+            .then(r => r.text())
+            .then(html => { document.getElementById('concertHeader').innerHTML = html; });
+    </script>
+
+    <div class="content">
+        <!-- BANNER PLACEHOLDER (Ready for future addition) -->
+        <div id="banner-container"></div>
+
+        <!-- YOUTUBE VIDEO PLACEHOLDER -->
+        <div class="video-container">
+            <iframe class="video-embed" src="https://www.youtube.com/embed/t_vZm3IblYs" title="Raized Wrong Feature" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- BIO & DETAILS -->
+        <div class="details-box">
+            <h2 style="color:#66ccff;text-align:center;margin-bottom:20px;">Artist Profile: Raized Wrong</h2>
+            <p><strong>Members:</strong> Landon Goldberg, Lyric Goldberg, and Donny Goldberg</p>
+            <p><strong>Origin:</strong> Southern California, USA</p>
+            <p><strong>Musical Style:</strong> Classic Rock, Pop Harmonies, Vintage Covers Reimagined</p>
+            <p><strong>Genre:</strong> Family Band / Next-Gen Performance</p>
+            
+            <h3 style="color:#66ccff;margin-top:25px;margin-bottom:10px;">Band Background & Origins</h3>
+            <p><strong>Raized Wrong</strong> is an energetic, highly acclaimed Southern California family band taking social media and international platforms by storm. Composed of young brothers <strong>Landon</strong> and <strong>Lyric Goldberg</strong> alongside their multitalented father <strong>Donny</strong>, the group specializes in breathing new life into legendary classic tracks from the 1960s, '70s, '80s, and beyond.</p>
+            
+            <h3 style="color:#66ccff;margin-top:25px;margin-bottom:10px;">Musical Lineage & Style</h3>
+            <p>Music runs deep in the family: Donny comes from a rich musical background (performing alongside family in a notable Beach Boys tribute project called <em>Surf's Up</em>), passing down his expertise in intricate vocal arrangements and vintage instrumentation directly to his sons. With millions of followers across platforms like TikTok and YouTube, Landon and Lyric have captured audiences worldwide with their tight sibling harmonies, instrumental talent, and infectious stage presence.</p>
+            
+            <h3 style="color:#66ccff;margin-top:25px;margin-bottom:10px;">Fun Facts & Highlights</h3>
+            <ul style="font-size:18px;line-height:1.6;color:#fff;">
+                <li>Represent a true third-generation musical family tradition rooted in classic harmony styling.</li>
+                <li>Known for seamlessly bridging generations by introducing timeless rock anthems to Gen Z audiences.</li>
+                <li>Built a massive global following of over 1.5 million fans through viral cover sessions and energetic performances.</li>
+            </ul>
+        </div>
+
+        <!-- LOCALSTORAGE COUNTER -->
+        <div style="text-align:center; margin:40px 0; color:#ccc; font-size:18px;">
+            Views: <span id="pageCounter">0</span>
+        </div>
+        <script>
+            let pageId = "raizedwrong";
+            let count = localStorage.getItem(pageId) || 0;
+            count++;
+            localStorage.setItem(pageId, count);
+            document.getElementById("pageCounter").innerText = count;
+        </script>
+
+        <!-- LAST UPDATED -->
+        <div style="text-align:center; margin-bottom:40px; color:#777;">
+            Last Updated: August 29, 2026 — 7:02 AM MDT
+        </div>
+
+        <!-- FOOTER LOADER -->
+        <div id="concertFooter"></div>
+        <script>
+            fetch("children-footer.html")
+                .then(r => r.text())
+                .then(html => { document.getElementById('concertFooter').innerHTML = html; });
+        </script>
+    </div>
+
+</body>
+</html>
