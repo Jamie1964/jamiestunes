@@ -1,5 +1,5 @@
 <!-- /jamiestunes.com/concerts/index.html -->
-<!-- August 28, 2026 — 8:15 PM MDT -->
+<!-- August 28, 2026 — 9:30 PM MDT -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,7 +62,7 @@
         </div>
 
         <div style="text-align:center;color:#888888;font-size:14px;margin:40px 0 20px 0;">
-          Last Updated: August 28, 2026 — 8:15 PM MDT
+          Last Updated: August 28, 2026 — 9:30 PM MDT
         </div>
 
       </main>
@@ -75,7 +75,24 @@
 <script>
   fetch('concerts-sidebar.html').then(r => r.text()).then(d => document.getElementById('concertSidebar').innerHTML = d);
   fetch('concerts-header.html').then(r => r.text()).then(d => document.getElementById('concertHeader').innerHTML = d);
-  fetch('concerts-footer.html').then(r => r.text()).then(d => document.getElementById('concertFooter').innerHTML = d);
+  
+  fetch('concerts-footer.html')
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById('concertFooter').innerHTML = html;
+
+      // NOW the footer exists — safe to run the counter
+      const domain = window.location.hostname.replace(/\./g, "_");
+      const page = window.location.pathname.replace(/\//g, "_") || "home";
+      const counterKey = "pv_" + domain + "_" + page;
+
+      let views = localStorage.getItem(counterKey);
+      views = views ? parseInt(views) + 1 : 1;
+      localStorage.setItem(counterKey, views);
+
+      document.getElementById("viewCounter").innerText = "Views: " + views;
+    })
+    .catch(err => console.error("Footer failed to load:", err));
 </script>
 
 </body>
