@@ -1,91 +1,120 @@
-
 <!-- sidewalk/lukesilva/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luke Silva | Live Street Performances & Music - Jamie's Tunes</title>
-    <meta name="description" content="Explore live street performances, viral duets, and acoustic cover songs by talented musician Luke Silva on Jamie's Tunes.">
+<meta charset="UTF-8">
+<meta name="description" content="Explore the biography, musical journey, live street performances, and viral cover videos of sensational singer and street musician Luke Silva on Jamie's Tunes.">
+<meta name="keywords" content="Luke Silva, Luke Silva music, street performance, busking, live vocals, Jamie's Tunes, acoustic covers, singer songwriter">
+<meta name="author" content="Jamie's Tunes">
+<title>Luke Silva - Biography, Live Videos &amp; Music | jamiestunes.com</title>
+<style>
+body {margin: 0; background: #121212; color: #fff; font-family: sans-serif; display: flex; min-height: 100vh; }
+#sidebar-slot {flex-shrink: 0; background: #121212; display: flex; }
+.main-wrapper {display: flex; flex-direction: column; flex-grow: 1; background: #121212; }
+#header-slot {width: 100%; background: #121212; }
+.content-area {flex-grow: 1; padding: 40px; background: #121212; text-align: center; }
+.content-area h1 {color: #1e90ff; font-size: 36px; margin-bottom: 20px; }
+.artist-section {margin: 40px auto; max-width: 600px; }
+.artist-section img {width: 640px; max-width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto 15px auto; }
+.artist-section h2 {color: gold; font-size: 28px; margin: 0; }
+.bio-section {max-width: 800px; margin: 40px auto; text-align: left; background: #1a1a1a; padding: 30px; border-radius: 8px; border: 1px solid #333; }
+.bio-section h3 {color: #1e90ff; font-size: 24px; margin-top: 0; text-align: center; }
+.bio-section p {font-size: 16px; color: #ccc; line-height: 1.8; margin-bottom: 20px; }
+.bio-section a {color: #1e90ff; text-decoration: none; }
+.bio-section a:hover {text-decoration: underline; }
+.video-container {position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 15px auto 0 auto; border-radius: 8px; }
+.video-container iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+#footer {width: 100%; background: #121212; }
+</style>
 </head>
-<body style="margin: 0; font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333; display: flex; flex-direction: column; min-height: 100vh;">
+<body>
 
-    <!-- Fetched Header Component -->
-    <div id="header-container"></div>
-    <script>
-        fetch('https://jamiestunes.com/sidewalk/sidewalk-header.html')
-            .then(response => response.text())
-            .then(data => { document.getElementById('header-container').innerHTML = data; });
-    </script>
+<!-- Sidebar Slot -->
+<div id="sidebar-slot"></div>
 
-    <!-- Main Layout Container -->
-    <div style="display: flex; flex: 1; flex-direction: row; flex-wrap: wrap;">
-        
-        <!-- Fetched Sidebar Component -->
-        <aside id="sidebar-container" style="width: 250px; background: #ffffff; padding: 20px; box-shadow: 2px 0 5px rgba(0,0,0,0.05);"></aside>
-        <script>
-            fetch('https://jamiestunes.com/sidewalk/sidewalk-sidebar.html')
-                .then(response => response.text())
-                .then(data => { document.getElementById('sidebar-container').innerHTML = data; });
-        </script>
+<!-- Main Wrapper holding Header, Content, and Footer -->
+<div class="main-wrapper">
 
-        <!-- Main Content Section -->
-        <main style="flex: 1; padding: 30px; background: #ffffff; margin: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-            
-            <!-- Banner Image -->
-            <div style="width: 100%; margin-bottom: 25px; text-align: center;">
-                <img src="http://jamiestunes.com/images/lukesilva-banner.jpg" alt="Luke Silva Banner" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 6px;">
-            </div>
+<!-- Header Slot -->
+<div id="header-slot"></div>
 
-            <h1 style="color: #1a1a1a; font-size: 2.5em; margin-bottom: 10px;">Luke Silva</h1>
-            <p style="font-size: 1.1em; line-height: 1.6; color: #555;">
-                Welcome to the dedicated artist archive for <strong>Luke Silva</strong> on Jamie's Tunes. Known around the world for captivating street performances, impromptu public duets, and soulful acoustic covers, Luke turns every street corner and stage into an unforgettable musical experience.
-            </p>
+<!-- Main Content Area -->
+<div class="content-area">
+<h1>Luke Silva</h1>
 
-            <hr style="border: 0; height: 1px; background: #ddd; margin: 30px 0;">
+<div class="artist-section">
+<img src="http://jamiestunes.com/images/lukesilva-banner.jpg" alt="Luke Silva - Live Street Musician">
+<h2>Luke Silva</h2>
 
-            <h2 style="color: #2c3e50; font-size: 1.8em; margin-bottom: 20px;">Featured Performances</h2>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-                <!-- Video Item 1 -->
-                <div style="background: #fafafa; padding: 15px; border-radius: 6px; border: 1px solid #e1e1e1;">
-                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                        <iframe src="https://www.youtube.com/embed/W1TEykwSfUk" title="Luke Silva Street Performance" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 4px;" allowfullscreen></iframe>
-                    </div>
-                    <h3 style="font-size: 1.2em; margin-top: 15px; color: #333;">His Harmonies Will MELT Your Heart</h3>
-                    <p style="font-size: 0.95em; color: #666;">Experience live busking and emotional crowd reactions captured on the streets.</p>
-                </div>
-            </div>
+<hr style="border: 0; border-top: 1px solid #333; margin: 30px auto; max-width: 400px;">
 
-            <div style="margin-top: 40px; padding: 20px; background: #eef2f7; border-radius: 6px; text-align: center;">
-                <p style="margin: 0; font-size: 1.1em; font-weight: bold; color: #2c3e50;">
-                    Total Page Views: <span id="view-count" style="color: #e74c3c;">0</span>
-                </p>
-            </div>
-        </main>
-    </div>
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/W1TEykwSfUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<h2 style="color: gold; font-size: 22px; margin-top: 15px;">His Harmonies Will MELT Your Heart</h2>
+</div>
 
-    <!-- Fetched Footer Component -->
-    <div id="footer-container"></div>
-    <script>
-        fetch('https://jamiestunes.com/sidewalk/sidewalk-footer.html')
-            .then(response => response.text())
-            .then(data => { document.getElementById('footer-container').innerHTML = data; });
-    </script>
+<!-- Comprehensive Bio / SEO Content Section -->
+<div class="bio-section">
+<h3>About Luke Silva</h3>
+<p><strong>Luke Silva</strong> is an internationally acclaimed singer, content creator, and viral street musician who has captured the hearts of millions across the globe. Known for his soulful vocal delivery, emotional depth, and incredible ability to engage with live crowds on street corners and urban plazas, Luke turns ordinary public spaces into breathtaking musical stages.</p>
+<p>Rising to massive popularity through viral videos on platforms like TikTok and YouTube—where his channel has amassed over 2 million subscribers—Luke frequently invites talented strangers and passersby to share the microphone with him. His signature performances showcase powerful acoustic renditions of chart-topping hits, emotional ballads, and dynamic covers that draw massive, captivated crowds.</p>
+<p>With formal performance training from London's ICMP (Music University & Performance School), Luke balances his viral street busking career with original musical releases and international appearances, cementing his status as one of the most exciting modern vocal talents performing live today.</p>
 
-    <!-- Custom localStorage Page View Counter Script -->
-    <script>
-        (function() {
-            const pageKey = 'page_views_lukesilva';
-            let views = localStorage.getItem(pageKey);
-            if (views) {
-                views = parseInt(views, 10) + 1;
-            } else {
-                views = 1;
-            }
-            localStorage.setItem(pageKey, views);
-            document.getElementById('view-count').textContent = views;
-        })();
-    </script>
+<p style="text-align: center; margin-top: 25px;"><a href="https://www.youtube.com/@lukesilvamusic" target="_blank" rel="noopener">Luke Silva on YouTube</a></p>
+</div>
+
+<!-- Second Video Section -->
+<div class="artist-section">
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/W1TEykwSfUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<h2 style="color: gold; font-size: 22px; margin-top: 15px;">Captivating Street Performance &amp; Live Crowd Reactions</h2>
+
+<hr style="border: 0; border-top: 1px solid #333; margin: 40px auto; max-width: 400px;">
+</div>
+
+</div>
+
+<!-- Footer Slot -->
+<div id="footer"></div>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+// Fetch and insert sidebar
+fetch('../sidewalk-sidebar.html')
+.then(response => response.text())
+.then(data => {document.getElementById('sidebar-slot').innerHTML = data;})
+.catch(error => console.error('Error loading sidebar:', error));
+
+// Fetch and insert header
+fetch('../sidewalk-header.html')
+.then(response => response.text())
+.then(data => {document.getElementById('header-slot').innerHTML = data;})
+.catch(error => console.error('Error loading header:', error));
+
+// Fetch and insert footer, then execute counter logic
+fetch('../sidewalk-footer.html')
+.then(r => r.text())
+.then(html => {
+document.getElementById('footer').innerHTML = html;
+
+// NOW the footer exists — safe to run the counter
+const domain = window.location.hostname.replace(/\./g, "_");
+const page = window.location.pathname.replace(/\//g, "_") || "home";
+const counterKey = "pv_" + domain + "_" + page;
+
+let views = localStorage.getItem(counterKey);
+views = views ? parseInt(views) + 1 : 1;
+localStorage.setItem(counterKey, views);
+
+document.getElementById("viewCounter").innerText = "Views: " + views;
+})
+.catch(err => console.error("Footer failed to load:", err));
+});
+</script>
+
 </body>
 </html>
