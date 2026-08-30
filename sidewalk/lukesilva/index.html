@@ -1,1 +1,91 @@
 
+<!-- sidewalk/lukesilva/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luke Silva | Live Street Performances & Music - Jamie's Tunes</title>
+    <meta name="description" content="Explore live street performances, viral duets, and acoustic cover songs by talented musician Luke Silva on Jamie's Tunes.">
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333; display: flex; flex-direction: column; min-height: 100vh;">
+
+    <!-- Fetched Header Component -->
+    <div id="header-container"></div>
+    <script>
+        fetch('https://jamiestunes.com/sidewalk/sidewalk-header.html')
+            .then(response => response.text())
+            .then(data => { document.getElementById('header-container').innerHTML = data; });
+    </script>
+
+    <!-- Main Layout Container -->
+    <div style="display: flex; flex: 1; flex-direction: row; flex-wrap: wrap;">
+        
+        <!-- Fetched Sidebar Component -->
+        <aside id="sidebar-container" style="width: 250px; background: #ffffff; padding: 20px; box-shadow: 2px 0 5px rgba(0,0,0,0.05);"></aside>
+        <script>
+            fetch('https://jamiestunes.com/sidewalk/sidewalk-sidebar.html')
+                .then(response => response.text())
+                .then(data => { document.getElementById('sidebar-container').innerHTML = data; });
+        </script>
+
+        <!-- Main Content Section -->
+        <main style="flex: 1; padding: 30px; background: #ffffff; margin: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            
+            <!-- Banner Image -->
+            <div style="width: 100%; margin-bottom: 25px; text-align: center;">
+                <img src="http://jamiestunes.com/images/lukesilva-banner.jpg" alt="Luke Silva Banner" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 6px;">
+            </div>
+
+            <h1 style="color: #1a1a1a; font-size: 2.5em; margin-bottom: 10px;">Luke Silva</h1>
+            <p style="font-size: 1.1em; line-height: 1.6; color: #555;">
+                Welcome to the dedicated artist archive for <strong>Luke Silva</strong> on Jamie's Tunes. Known around the world for captivating street performances, impromptu public duets, and soulful acoustic covers, Luke turns every street corner and stage into an unforgettable musical experience.
+            </p>
+
+            <hr style="border: 0; height: 1px; background: #ddd; margin: 30px 0;">
+
+            <h2 style="color: #2c3e50; font-size: 1.8em; margin-bottom: 20px;">Featured Performances</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                <!-- Video Item 1 -->
+                <div style="background: #fafafa; padding: 15px; border-radius: 6px; border: 1px solid #e1e1e1;">
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                        <iframe src="https://www.youtube.com/embed/W1TEykwSfUk" title="Luke Silva Street Performance" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 4px;" allowfullscreen></iframe>
+                    </div>
+                    <h3 style="font-size: 1.2em; margin-top: 15px; color: #333;">His Harmonies Will MELT Your Heart</h3>
+                    <p style="font-size: 0.95em; color: #666;">Experience live busking and emotional crowd reactions captured on the streets.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 40px; padding: 20px; background: #eef2f7; border-radius: 6px; text-align: center;">
+                <p style="margin: 0; font-size: 1.1em; font-weight: bold; color: #2c3e50;">
+                    Total Page Views: <span id="view-count" style="color: #e74c3c;">0</span>
+                </p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Fetched Footer Component -->
+    <div id="footer-container"></div>
+    <script>
+        fetch('https://jamiestunes.com/sidewalk/sidewalk-footer.html')
+            .then(response => response.text())
+            .then(data => { document.getElementById('footer-container').innerHTML = data; });
+    </script>
+
+    <!-- Custom localStorage Page View Counter Script -->
+    <script>
+        (function() {
+            const pageKey = 'page_views_lukesilva';
+            let views = localStorage.getItem(pageKey);
+            if (views) {
+                views = parseInt(views, 10) + 1;
+            } else {
+                views = 1;
+            }
+            localStorage.setItem(pageKey, views);
+            document.getElementById('view-count').textContent = views;
+        })();
+    </script>
+</body>
+</html>
