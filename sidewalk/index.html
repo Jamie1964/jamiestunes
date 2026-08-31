@@ -61,6 +61,23 @@ body {
 .artist-section h2:hover {
     text-decoration: underline;
 }
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin: 15px auto 0 auto;
+    border-radius: 8px;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 #footer {
     width: 100%;
     background: #121212;
@@ -85,6 +102,15 @@ body {
         <p style="font-size: 18px; color: #aaa; line-height: 1.6; margin-bottom: 40px;">
             Discover raw, captivating acoustic performances and incredible talent captured right out on the streets and sidewalks.
         </p>
+
+        <!-- Top Featured Video Section -->
+        <div class="artist-section">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-ps-ArOaMbk?si=xhF0o713PYplEJS5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #333; margin: 50px auto; max-width: 600px;">
 
         <!-- Leire Artist Section -->
         <div class="artist-section">
@@ -174,5 +200,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v3d52b47920f24c319d37e2661827c42b1787588026925" integrity="sha512-d9sL6GJLXn6fInD1+TVXhTcQOsmxeHfmHAvwGDIxp5TO+uo1fiWW7mHomMj4MLRlCsJDTqXzWLHJFFlPCEIj/A==" data-cf-beacon='{"version":"2024.11.0","token":"f91196a257c64d3e813b6acc5e8430a0","r":1}' crossorigin="anonymous"></script>
 </body>
 </html>
